@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Ascend Quran Academy - Learn Quran & Arabic Online</title>
+</head>
+<style>
+        .accordion-content {
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding-bottom: 0;
+        }
+
+        .accordion-content.is-open {
+            padding-bottom: 1rem; /* يعادل pb-4 في Tailwind */
+        }
+    </style>
+<body>
+    <!-- Header -->
+    <header class="shadow-md bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center py-5">
+                <img src="./images/s 1.png" alt="Ascend Quran Academy Logo" class="h-16 w-auto">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-lg">
+                <a href="./index.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Home</a>
+                <a href="./Our_Programs.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
+                <a href="./Our_Teachers.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
+                <a href="./Courses.html" class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Courses</a>
+                <a href="#" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">About Us</a>
+                <a href="./Contact.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="./login.html" class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden sm:flex font-semibold text-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    <span>Login</span>
+                </a>
+
+                <a href="#" class="bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-lg shadow-md">
+                    Enroll Now
+                </a>
+
+                <button class="md:hidden p-2 text-gray-600 hover:text-teal-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+<main class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" dir="ltr">
+            <h1 class="text-3xl font-extrabold text-gray-800 mb-4 inline-block border-b-2 border-[#1E90A0] pb-0.5">
+                Frequently Asked Questions
+            </h1>
+            <p class="text-gray-600 mb-12 max-w-3xl text-lg">
+                Find quick answers about our online Quran and Arabic programs, classes, teachers, and registration process. If you can't find your question, feel free to contact us anytime.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Courses & Programs</h3>
+                        <div class="space-y-1">
+                            
+                            <div class="border-b border-gray-100">
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(1)">
+                                    What programs do you offer?
+                                    <svg id="icon1" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer1" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    We offer <b>Quran Memorization</b>, <b>Tajweed</b>, <b>Arabic for Beginners</b>, and <b>Quranic Understanding</b> courses for both kids and adults.
+                                </div>
+                            </div>
+
+                            <div class="border-b border-gray-100">
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(2)">
+                                    Are your classes suitable for beginners?
+                                    <svg id="icon2" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer2" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    Yes, absolutely! We have dedicated courses designed for <b>absolute beginners</b> of all ages, starting with basic letter recognition and foundational reading skills.
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(3)">
+                                    How are the classes conducted?
+                                    <svg id="icon3" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer3" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    All classes are conducted <b>online via live one-on-one sessions</b> with your assigned instructor, ensuring personalized attention and maximum learning benefit.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Payments & Pricing</h3>
+                        <div class="space-y-1">
+                            
+                            <div class="border-b border-gray-100">
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(4)">
+                                    How do I pay for my classes?
+                                    <svg id="icon4" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer4" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    We accept payments via <b>credit card, PayPal, and bank transfers</b>. Monthly and quarterly payment plans are available for your convenience.
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(5)">
+                                    Do you offer free trial classes?
+                                    <svg id="icon5" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer5" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    Yes, we offer a <b>free 30-minute trial session</b> to assess the student's level and introduce them to the teacher and curriculum.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Teachers</h3>
+                        <div class="space-y-1">
+                            
+                            <div class="border-b border-gray-100">
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(6)">
+                                    Who are your teachers?
+                                    <svg id="icon6" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer6" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    Our instructors are <b>specialized, native Arabic speakers, highly qualified</b>, and hold <b>Ijazahs (certifications)</b> in Quranic studies.
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(7)">
+                                    Can I choose my teacher?
+                                    <svg id="icon7" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer7" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    Yes, you can <b>request a specific instructor</b> based on availability, and we will do our best to match you with your preferred teacher.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Scheduling & Attendance</h3>
+                        <div class="space-y-1">
+                            
+                            <div class="border-b border-gray-100">
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(8)">
+                                    Can I reschedule a class?
+                                    <svg id="icon8" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer8" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    You can reschedule a class for free up to <b>24 hours before</b> the scheduled time via your student dashboard.
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="w-full text-left flex justify-between items-center py-4 font-semibold text-gray-800 hover:text-[#1E90A0] transition duration-150"
+                                    onclick="toggleAccordion(9)">
+                                    What if I miss a class?
+                                    <svg id="icon9" class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <div id="answer9" class="accordion-content max-h-0 overflow-hidden text-gray-600 leading-relaxed">
+                                    Classes missed without prior notice (no-show) may be considered canceled without compensation. Please refer to our detailed attendance policy.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-white p-8 rounded-xl shadow-xl relative overflow-hidden"
+                style="background-color: #1E90A0; background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px;">
+                <div class="flex flex-col md:flex-row items-center justify-between relative z-10">
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-6 h-6 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.228 9c0.549-1.57.85-3.13 1.258-4.502M12 21V12.75M12 21c-3.1 0-5.8-1.4-7.5-3.6M12 21c3.1 0 5.8-1.4 7.5-3.6"/>
+                        </svg>
+                        <div>
+                            <p class="text-xl font-bold mb-1">Still have questions?</p>
+                            <p class="text-gray-100">We're here to help you start your Quran and Arabic learning journey.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-6 md:mt-0 bg-white text-[#1E90A0] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-md">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+<script>
+  function toggleAccordion(num) {
+    const content = document.getElementById(`answer${num}`);
+    const icon = document.getElementById(`icon${num}`);
+    const isOpen = content.classList.contains('max-h-96');
+
+    // Close all
+    document.querySelectorAll('[id^="answer"]').forEach(el => el.classList.replace('max-h-96', 'max-h-0'));
+    document.querySelectorAll('[id^="icon"]').forEach(ic => ic.classList.remove('rotate-90'));
+
+    // Open the selected one
+    if (!isOpen) {
+      content.classList.replace('max-h-0', 'max-h-96');
+      icon.classList.add('rotate-90');
+    }
+  }
+
+  // Open first by default
+  window.addEventListener('DOMContentLoaded', () => toggleAccordion(1));
+</script>
+
+      <footer class=" bg-[#1E90A0] py-16 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
+
+                <div class="col-span-2 lg:col-span-2">
+                    <a href="#" class="inline-block mb-4">
+                        <img src="./images/s 1.png" alt="Ascend Quran Academy Logo" class="h-16 w-auto">
+                    </a>
+                    <p class="text-gray-200 text-sm max-w-sm mt-4">
+                        The leading online platform providing high-quality Quran and Arabic education with certified
+                        native instructors.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-white hover:text-yellow-400 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.477 2 2 6.477 2 12c0 5.143 3.79 9.362 8.718 10.198v-7.295H7.078V12h2.64v-1.996c0-2.61 1.575-4.043 3.926-4.043 1.112 0 2.27.199 2.27.199v2.5H14.12c-1.242 0-1.623.772-1.623 1.554V12h2.89l-.466 2.895h-2.424v7.295A10.003 10.003 0 0022 12C22 6.477 17.523 2 12 2z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-yellow-400 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2c-3.1 0-3.48.01-4.704.066-1.22.057-2.07.24-2.812.518-.732.277-1.34.664-1.939 1.263-.598.599-.986 1.207-1.263 1.94-.278.74-.46 1.59-.518 2.811C2.01 8.52 2 8.9 2 12s.01 3.48.066 4.704c.057 1.22.24 2.07.518 2.812.277.732.664 1.34 1.263 1.939.599.598 1.207.986 1.94 1.263.74.278 1.59.46 2.811.518C8.52 21.99 8.9 22 12 22s3.48-.01 4.704-.066c1.22-.057 2.07-.24 2.812-.518.732-.277 1.34-.664 1.939-1.263.598-.599 1.207-.986 1.94-1.263.74-.278 1.59-.46 2.811-.518C21.99 15.48 22 15.1 22 12s-.01-3.48-.066-4.704c-.057-1.22-.24-2.07-.518-2.812-.277-.732-.664-1.34-1.263-1.939-.599-.598-1.207-.986-1.94-1.263-.74-.278-1.59-.46-2.811-.518C15.48 2.01 15.1 2 12 2zm0 1.8c2.9.006 3.25.018 4.38.07c1.07.05 1.76.24 2.16.4.4.17.65.37.93.65.28.28.48.53.65.93.16.4.35 1.09.4 2.16.05 1.13.064 1.48.07 4.38s-.006 3.25-.07 4.38c-.05 1.07-.24 1.76-.4 2.16-.17.4-.37.65-.65.93-.28.28-.53.48-.93.65-.4.16-1.09.35-2.16.4-1.13.05-1.48.064-4.38.07s-3.25-.006-4.38-.07c-1.07-.05-1.76-.24-2.16-.4-.4-.17-.65-.37-.93-.65-.28-.28-.48-.53-.65-.93-.16-.4-.35-1.09-.4-2.16-.05-1.13-.064-1.48-.07-4.38s.006-3.25.07-4.38c.05-1.07.24-1.76.4-2.16.17-.4.37-.65.65-.93.28-.28.53-.48.93-.65.4-.16 1.09-.35 2.16-.4 1.13-.05 1.48-.064 4.38-.07zM12 6.8a5.2 5.2 0 100 10.4 5.2 5.2 0 000-10.4zM12 15.4a3.4 3.4 0 110-6.8 3.4 3.4 0 010 6.8zM17.2 5.7c-.4 0-.7.3-.7.7s.3.7.7.7.7-.3.7-.7-.3-.7-.7-.7z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-yellow-400 transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M22.46 6c-.84.37-1.74.62-2.67.73.96-.58 1.71-1.5 2.06-2.61-.9.53-1.9.92-2.94 1.13C18.66 4.6 17.5 4 16.18 4c-2.58 0-4.67 2.09-4.67 4.67 0 .37.04.73.11 1.07-3.88-.19-7.3-2.05-9.6-4.88-.4.69-.64 1.49-.64 2.35 0 1.62.82 3.05 2.07 3.88-.76-.02-1.48-.23-2.1-.58v.06c0 2.26 1.61 4.14 3.75 4.56-.39.11-.8.17-1.22.17-.3 0-.58-.03-.86-.08.59 1.85 2.3 3.19 4.32 3.23-1.6 1.26-3.62 2.01-5.83 2.01-.38 0-.75-.02-1.12-.07 2.08 1.34 4.55 2.12 7.2 2.12 8.64 0 13.37-7.16 13.37-13.37 0-.2-.01-.4-.02-.6.92-.66 1.72-1.49 2.35-2.43z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-bold mb-4 text-yellow-400">Useful Links</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Our Teachers</a>
+                        </li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Testimonials</a>
+                        </li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-bold mb-4 text-yellow-400">Our Programs</h5>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Hifz
+                                (Memorization)</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Tajweed
+                                Courses</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Arabic
+                                Language</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Tafsir &
+                                Ijazah</a>
+                        </li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition duration-300">Islamic
+                                Studies</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 md:col-span-1 lg:col-span-1">
+                    <h5 class="text-lg font-bold mb-4 text-yellow-400">Stay Updated</h5>
+                    <p class="text-gray-200 text-sm mb-4">
+                        Subscribe to our newsletter for the latest updates and special offers.
+                    </p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Your email address"
+                            class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm">
+                        <button type="submit"
+                            class="bg-[#1E90A0] text-white font-semibold py-3 rounded-lg hover:bg-teal-700 transition duration-300 shadow-md text-sm">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2024 Ascend Quran Academy. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
