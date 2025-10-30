@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDQeM5F+pB5m9t8pX4sF9b7a4Gk/9A8N0/oB1oD/p0fA7/lA7dE/8tQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vibrant-green': '#009FBC',
+                        'deep-blue': '#1D3A5F',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9fafb;
+        }
+
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-gray-50">
+    <div class="flex min-h-screen">
+        <aside
+            class="w-56 bg-gradient-to-b from-vibrant-green to-deep-blue text-white flex flex-col rounded-3xl shadow-xl m-4 sticky top-4 h-[calc(100vh-2rem)]">
+            <div class="flex flex-col items-center py-6 border-b border-white/10">
+ 
+                    <img src="../images/Gemini_Generated_Image_9401xh9401xh9401.png" class="h-16 w-16 rounded-2xl shadow-lg mb-3 flex items-center justify-center" alt="Logo">
+                <h1 class="text-base font-bold tracking-wide">Ascend</h1>
+
+
+            <nav class="flex-grow px-4 py-6 space-y-1 text-sm">
+                <a href="./index.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl bg-white/20 backdrop-blur-sm font-medium">
+                    <i class="fa-solid fa-th-large mr-3 text-base"></i> Dashboard
+                </a>
+                <a href="./MyCourses.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-book mr-3 text-base"></i> My Courses
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-layer-group mr-3 text-base"></i> Programs
+                </a>
+                <a href="./Schedule.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-regular fa-calendar mr-3 text-base"></i> Schedule
+                </a>
+                <a href="./Assessments.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-clipboard-list mr-3 text-base"></i> Assignments
+                </a>
+                <a href="./Subscription.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-crown mr-3 text-base"></i> Subscription
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-credit-card mr-3 text-base"></i> Payment Info
+                </a>
+                <a href="./Progress_Reports.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-chart-line mr-3 text-base"></i> Progress Reports
+                </a>
+                <a href="./Settings.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-cog mr-3 text-base"></i> Settings
+                </a>
+            </nav>
+
+            <div class="border-t border-white/10 px-4 py-4">
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-sign-out-alt mr-3 text-base"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="flex-grow p-6 overflow-y-auto">
+
+            <!-- Header -->
+            <header class="flex justify-between items-center mb-6">
+                <div class="relative w-80">
+                    <input type="text" placeholder="Search"
+                        class="w-full pl-10 pr-4 py-2.5 bg-white border-0 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-vibrant-green/30 shadow-sm">
+                    <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-bell text-gray-600"></i>
+                    </button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-envelope text-gray-600"></i>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 border-2 border-white shadow-md">
+                        </div>
+                        <span class="text-gray-800 font-semibold text-sm">Aly Ahmed</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- My Assignments -->
+            <section class="bg-white rounded-3xl shadow-lg p-6">
+                <h2 class="text-xl font-bold text-deep-blue mb-6">My Assignments</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Assignment Cards (same as before, untouched structurally) -->
+                    <!-- ✅ Pending -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+                        <img src="../images/7a6530b344674fb76f2ecc168ff948e790563169.jpg" alt="Quran on stand"
+                            class="w-full h-32 object-cover rounded-lg mb-4 bg-green-50">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-clock text-yellow-600"></i>
+                                </div>
+                                <span
+                                    class="text-xs font-medium text-yellow-600 bg-yellow-100 px-3 py-1 rounded-full">Pending</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-xs mb-1">Nov 12, 2025</p>
+                        <h3 class="font-semibold text-deep-blue mb-1">Quran Level 2</h3>
+                        <h4 class="font-medium text-gray-800 mb-2">Surah Al-Baqarah Recitation</h4>
+                        <p class="text-sm text-gray-600 mb-4">Record yourself reciting verses 1–5 of Surah Al-Baqarah.
+                        </p>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-gray-100 text-deep-blue text-sm font-medium py-2 rounded-lg hover:bg-gray-200 transition">
+                                Download Task Sheet</button>
+                            <button
+                                class="flex-1 bg-vibrant-green text-white text-sm font-medium py-2 rounded-lg hover:bg-teal-600 transition">
+                                Submit Assignment</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Submitted -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+                        <img src="../images/7a6530b344674fb76f2ecc168ff948e790563169.jpg" alt="Quran reading"
+                            class="w-full h-32 object-cover rounded-lg mb-4 bg-green-50">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-paper-plane text-blue-600"></i>
+                                </div>
+                                <span
+                                    class="text-xs font-medium text-blue-600 bg-blue-100 px-3 py-1 rounded-full">Submitted</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-xs mb-1">Nov 12, 2025</p>
+                        <h3 class="font-semibold text-deep-blue mb-1">Quran Level 2</h3>
+                        <h4 class="font-medium text-gray-800 mb-2">Reading Practice – Lesson 3</h4>
+                        <p class="text-sm text-gray-600 mb-4">Read aloud the sentences from page 14 and upload your
+                            recording.</p>
+                        <p class="text-xs text-gray-600 mb-3">File Uploaded: <span
+                                class="text-vibrant-green font-medium">Reading_Practice3.Mp3</span></p>
+                    </div>
+
+                    <!-- ✅ Graded -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+                        <img src="../images/7a6530b344674fb76f2ecc168ff948e790563169.jpg" alt="Quran reflection"
+                            class="w-full h-32 object-cover rounded-lg mb-4 bg-green-50">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-check text-green-600"></i>
+                                </div>
+                                <span
+                                    class="text-xs font-medium text-green-600 bg-green-100 px-3 py-1 rounded-full">Graded</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-xs mb-1">Nov 12, 2025</p>
+                        <h3 class="font-semibold text-deep-blue mb-1">Quranic Understanding – Tafsir Basics</h3>
+                        <h4 class="font-medium text-gray-800 mb-2">Reflection on Surah Al-Asr</h4>
+                        <p class="text-sm text-gray-600 mb-4">Answer worksheet questions and upload your answers.</p>
+                        <p class="text-sm font-medium text-gray-700 mb-3">Grade: <span class="text-green-600">9.5 /
+                                10</span></p>
+                        <button
+                            class="w-full bg-vibrant-green text-white text-sm font-medium py-2 rounded-lg hover:bg-teal-600 transition">
+                            View Feedback</button>
+                    </div>
+
+                    <!-- ✅ Overdue -->
+                    <div
+                        class="bg-white border border-red-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition md:col-span-2 lg:col-span-1">
+                        <img src="../images/7a6530b344674fb76f2ecc168ff948e790563169.jpg" alt="Surah Al-Asr"
+                            class="w-full h-32 object-cover rounded-lg mb-4 bg-red-50">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-exclamation-triangle text-red-600"></i>
+                                </div>
+                                <span
+                                    class="text-xs font-medium text-red-600 bg-red-100 px-3 py-1 rounded-full">Overdue</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-xs mb-1">Nov 12, 2025</p>
+                        <h3 class="font-semibold text-deep-blue mb-1">Quranic Understanding – Tafsir Basics</h3>
+                        <h4 class="font-medium text-gray-800 mb-2">Reflection on Surah Al-Asr</h4>
+                        <p class="text-sm text-gray-600 mb-4">Write a short reflection (150–200 words) about the main
+                            lessons of
+                            Surah Al-Asr.</p>
+                        <div class="flex items-center text-red-600 text-xs mb-3">
+                            <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+                            <span>Please contact your teacher if you need an extension.</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-vibrant-green text-white text-sm font-medium py-2 rounded-lg hover:bg-teal-600 transition">Submit</button>
+                            <button
+                                class="flex-1 bg-gray-100 text-deep-blue text-sm font-medium py-2 rounded-lg hover:bg-gray-200 transition">Message
+                                Teacher</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

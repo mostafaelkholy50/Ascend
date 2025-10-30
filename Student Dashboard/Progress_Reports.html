@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDQeM5F+pB5m9t8pX4sF9b7a4Gk/9A8N0/oB1oD/p0fA7/lA7dE/8tQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vibrant-green': '#009FBC',
+                        'deep-blue': '#1D3A5F',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            /* The overall page background color, matching your setup */
+            background-color: #f3f4f6;
+        }
+
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+
+        /* Custom style for the active sidebar item */
+        .active-sidebar-link {
+            background-color: white;
+            color: #1D3A5F;
+            /* deep-blue for text on white background */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .active-sidebar-link i {
+            color: #009FBC;
+            /* vibrant-green for icon */
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-gray-50">
+    <div class="flex min-h-screen">
+
+        <aside
+            class="w-56 bg-gradient-to-b from-vibrant-green to-deep-blue text-white flex flex-col rounded-3xl shadow-xl m-4 sticky top-4 h-[calc(100vh-2rem)]">
+            <div class="flex flex-col items-center py-6 border-b border-white/10">
+ 
+                    <img src="../images/Gemini_Generated_Image_9401xh9401xh9401.png" class="h-16 w-16 rounded-2xl shadow-lg mb-3 flex items-center justify-center" alt="Logo">
+                <h1 class="text-base font-bold tracking-wide">Ascend</h1>
+
+
+            <nav class="flex-grow px-4 py-6 space-y-1 text-sm">
+                <a href="./index.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl bg-white/20 backdrop-blur-sm font-medium">
+                    <i class="fa-solid fa-th-large mr-3 text-base"></i> Dashboard
+                </a>
+                <a href="./MyCourses.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-book mr-3 text-base"></i> My Courses
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-layer-group mr-3 text-base"></i> Programs
+                </a>
+                <a href="./Schedule.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-regular fa-calendar mr-3 text-base"></i> Schedule
+                </a>
+                <a href="./Assessments.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-clipboard-list mr-3 text-base"></i> Assignments
+                </a>
+                <a href="./Subscription.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-crown mr-3 text-base"></i> Subscription
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-credit-card mr-3 text-base"></i> Payment Info
+                </a>
+                <a href="./Progress_Reports.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-chart-line mr-3 text-base"></i> Progress Reports
+                </a>
+                <a href="./Settings.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-cog mr-3 text-base"></i> Settings
+                </a>
+            </nav>
+
+            <div class="border-t border-white/10 px-4 py-4">
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-sign-out-alt mr-3 text-base"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-grow p-6 overflow-y-auto">
+
+            <header class="flex justify-between items-center mb-6">
+                <div class="relative w-80">
+                    <input type="text" placeholder="Search"
+                        class="w-full pl-10 pr-4 py-2.5 bg-white border-0 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-vibrant-green/30 shadow-sm">
+                    <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-bell text-gray-600"></i>
+                    </button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-envelope text-gray-600"></i>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 border-2 border-white shadow-md">
+                            <img src="https://via.placeholder.com/40" alt="Aly Ahmed"
+                                class="w-full h-full object-cover rounded-full opacity-0">
+                        </div>
+                        <span class="text-gray-800 font-semibold text-sm">Aly Ahmed</span>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Your Learning Progress</h2>
+
+                <div class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm mb-8">
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center border border-gray-300 rounded-lg bg-gray-50 px-3 py-2">
+                            <label for="course-filter" class="mr-2 text-gray-600">Course</label>
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-400 ml-1"></i>
+                            <select id="course-filter" class="bg-transparent appearance-none focus:outline-none w-20">
+                                <option>All</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-center border border-gray-300 rounded-lg bg-gray-50 px-3 py-2">
+                            <label for="date-range-filter" class="mr-2 text-gray-600">Date Range</label>
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-400 ml-1"></i>
+                            <select id="date-range-filter"
+                                class="bg-transparent appearance-none focus:outline-none w-24">
+                                <option>Last 30 Days</option>
+                            </select>
+                        </div>
+
+                        <div class="relative flex items-center border border-gray-300 rounded-lg bg-gray-50 px-3 py-2">
+                            <i class="fa-solid fa-magnifying-glass text-xs text-gray-400 mr-2"></i>
+                            <input type="text" placeholder="Teacher Name"
+                                class="bg-transparent focus:outline-none w-32" />
+                        </div>
+
+                        <button
+                            class="w-8 h-8 rounded-full bg-vibrant-green/10 text-vibrant-green flex items-center justify-center hover:bg-vibrant-green/20 transition">
+                            <i class="fa-solid fa-search text-sm"></i>
+                        </button>
+                    </div>
+
+                    <button
+                        class="flex items-center text-vibrant-green text-sm font-medium border border-vibrant-green/30 px-3 py-2 rounded-lg hover:bg-vibrant-green/10 transition">
+                        <i class="fa-solid fa-filter mr-2 text-xs"></i>
+                        Filter
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="h-40 bg-gray-100 flex items-center justify-center relative">
+                            <img src="../images/831dbf0c3e9f5ab0e20a3f8973168838a778e69e.jpg" alt="Course visual"
+                                class="object-cover w-full h-full" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-deep-blue mb-1">Quran Memorization Program</h3>
+                            <p class="text-xs text-gray-500 mb-3">
+                                <i class="fa-regular fa-calendar text-vibrant-green mr-1"></i> Oct 15, 2025
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <img src="../images/55303ec65e745c6b2487d20f612495ff0b2eb5e6.jpg" alt=""
+                                    class="w-8 h-8 rounded-full bg-gray-200 mr-3" />
+                                <div>
+                                    <p class="text-sm font-medium text-gray-800">Sheikh Ahmad Al-Masri</p>
+                                    <p class="text-xs text-gray-500">Teacher</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4">
+                                The student has memorized 5 new surahs this month with improved Tajweed accuracy.
+                            </p>
+                            <a href="./Detailed_Report.html">
+                                <button
+                                    class="w-full py-2 border-2 border-vibrant-green/50 text-vibrant-green rounded-xl font-medium hover:bg-vibrant-green/10 transition">
+                                    View Full Report
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="h-40 bg-gray-100 flex items-center justify-center relative">
+                            <img src="../images/831dbf0c3e9f5ab0e20a3f8973168838a778e69e.jpg" alt="Course visual"
+                                class="object-cover w-full h-full" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-deep-blue mb-1">Quran Memorization Program</h3>
+                            <p class="text-xs text-gray-500 mb-3">
+                                <i class="fa-regular fa-calendar text-vibrant-green mr-1"></i> Oct 15, 2025
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <img src="../images/55303ec65e745c6b2487d20f612495ff0b2eb5e6.jpg" alt=""
+                                    class="w-8 h-8 rounded-full bg-gray-200 mr-3" />
+                                <div>
+                                    <p class="text-sm font-medium text-gray-800">Sheikh Ahmad Al-Masri</p>
+                                    <p class="text-xs text-gray-500">Teacher</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4">
+                                The student has memorized 5 new surahs this month with improved Tajweed accuracy.
+                            </p>
+                            <a href="./Detailed_Report.html">
+                                <button
+                                    class="w-full py-2 border-2 border-vibrant-green/50 text-vibrant-green rounded-xl font-medium hover:bg-vibrant-green/10 transition">
+                                    View Full Report
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="h-40 bg-gray-100 flex items-center justify-center relative">
+                            <img src="../images/831dbf0c3e9f5ab0e20a3f8973168838a778e69e.jpg" alt="Course visual"
+                                class="object-cover w-full h-full" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-deep-blue mb-1">Quran Memorization Program</h3>
+                            <p class="text-xs text-gray-500 mb-3">
+                                <i class="fa-regular fa-calendar text-vibrant-green mr-1"></i> Oct 15, 2025
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <img src="../images/55303ec65e745c6b2487d20f612495ff0b2eb5e6.jpg" alt=""
+                                    class="w-8 h-8 rounded-full bg-gray-200 mr-3" />
+                                <div>
+                                    <p class="text-sm font-medium text-gray-800">Sheikh Ahmad Al-Masri</p>
+                                    <p class="text-xs text-gray-500">Teacher</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4">
+                                The student has memorized 5 new surahs this month with improved Tajweed accuracy.
+                            </p>
+                            <a href="./Detailed_Report.html">
+                                <button
+                                    class="w-full py-2 border-2 border-vibrant-green/50 text-vibrant-green rounded-xl font-medium hover:bg-vibrant-green/10 transition">
+                                    View Full Report
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                        <div class="h-40 bg-gray-100 flex items-center justify-center relative">
+                            <img src="../images/831dbf0c3e9f5ab0e20a3f8973168838a778e69e.jpg" alt="Course visual"
+                                class="object-cover w-full h-full" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-deep-blue mb-1">Quran Memorization Program</h3>
+                            <p class="text-xs text-gray-500 mb-3">
+                                <i class="fa-regular fa-calendar text-vibrant-green mr-1"></i> Oct 15, 2025
+                            </p>
+                            <div class="flex items-center mb-3">
+                                <img src="../images/55303ec65e745c6b2487d20f612495ff0b2eb5e6.jpg" alt=""
+                                    class="w-8 h-8 rounded-full bg-gray-200 mr-3" />
+                                <div>
+                                    <p class="text-sm font-medium text-gray-800">Sheikh Ahmad Al-Masri</p>
+                                    <p class="text-xs text-gray-500">Teacher</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4">
+                                The student has memorized 5 new surahs this month with improved Tajweed accuracy.
+                            </p>
+                            <a href="./Detailed_Report.html">
+                                <button
+                                    class="w-full py-2 border-2 border-vibrant-green/50 text-vibrant-green rounded-xl font-medium hover:bg-vibrant-green/10 transition">
+                                    View Full Report
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center space-x-2">
+                    <button class="w-10 h-10 rounded-full text-gray-500 hover:bg-gray-100 transition">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button class="w-10 h-10 rounded-full bg-vibrant-green text-white font-semibold shadow-md">
+                        1
+                    </button>
+                    <button class="w-10 h-10 rounded-full text-gray-500 hover:bg-gray-100 transition">
+                        2
+                    </button>
+                    <button class="w-10 h-10 rounded-full text-gray-500 hover:bg-gray-100 transition">
+                        3
+                    </button>
+                    <button class="w-10 h-10 rounded-full text-gray-500 hover:bg-gray-100 transition">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDQeM5F+pB5m9t8pX4sF9b7a4Gk/9A8N0/oB1oD/p0fA7/lA7dE/8tQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vibrant-green': '#009FBC',
+                        'deep-blue': '#1D3A5F',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+
+        .tab-link.active {
+            color: #1D3A5F;
+            border-bottom: 2px solid #009FBC;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-gray-50">
+    <div class="flex min-h-screen">
+
+        <aside
+            class="w-56 bg-gradient-to-b from-vibrant-green to-deep-blue text-white flex flex-col rounded-3xl shadow-xl m-4 sticky top-4 h-[calc(100vh-2rem)]">
+            <div class="flex flex-col items-center py-6 border-b border-white/10">
+ 
+                    <img src="../images/Gemini_Generated_Image_9401xh9401xh9401.png" class="h-16 w-16 rounded-2xl shadow-lg mb-3 flex items-center justify-center" alt="Logo">
+                <h1 class="text-base font-bold tracking-wide">Ascend</h1>
+
+
+            <nav class="flex-grow px-4 py-6 space-y-1 text-sm">
+                <a href="./index.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl bg-white/20 backdrop-blur-sm font-medium">
+                    <i class="fa-solid fa-th-large mr-3 text-base"></i> Dashboard
+                </a>
+                <a href="./MyCourses.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-book mr-3 text-base"></i> My Courses
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-layer-group mr-3 text-base"></i> Programs
+                </a>
+                <a href="./Schedule.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-regular fa-calendar mr-3 text-base"></i> Schedule
+                </a>
+                <a href="./Assessments.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-clipboard-list mr-3 text-base"></i> Assignments
+                </a>
+                <a href="./Subscription.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-crown mr-3 text-base"></i> Subscription
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-credit-card mr-3 text-base"></i> Payment Info
+                </a>
+                <a href="./Progress_Reports.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-chart-line mr-3 text-base"></i> Progress Reports
+                </a>
+                <a href="./Settings.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-cog mr-3 text-base"></i> Settings
+                </a>
+            </nav>
+
+            <div class="border-t border-white/10 px-4 py-4">
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-sign-out-alt mr-3 text-base"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-grow p-6 overflow-y-auto">
+
+            <header class="flex justify-between items-center mb-6">
+                <div class="relative w-80">
+                    <input type="text" placeholder="Search"
+                        class="w-full pl-10 pr-4 py-2.5 bg-white border-0 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-vibrant-green/30 shadow-sm">
+                    <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-bell text-gray-600"></i>
+                    </button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-envelope text-gray-600"></i>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 border-2 border-white shadow-md">
+                            <img src="https://via.placeholder.com/40" alt="Aly Ahmed"
+                                class="w-full h-full object-cover rounded-full opacity-0">
+                        </div>
+                        <span class="text-gray-800 font-semibold text-sm">Aly Ahmed</span>
+                    </div>
+                    <div class="relative">
+                        <button
+                            class="flex items-center bg-white px-3 py-1.5 rounded-full shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+                            EN <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="bg-white p-8 rounded-2xl shadow-xl w-full">
+
+                <div class="flex border-b border-gray-200 mb-8 text-gray-500 text-base">
+                    <button id="tab-profile" data-tab="profile"
+                        class="tab-link active px-4 py-2 -mb-px transition duration-150 ease-in-out focus:outline-none">
+                        Edit Profile
+                    </button>
+                    <button id="tab-password" data-tab="password"
+                        class="tab-link px-4 py-2 -mb-px transition duration-150 ease-in-out focus:outline-none ml-6">
+                        change password
+                    </button>
+                    <button id="tab-history" data-tab="history"
+                        class="tab-link px-4 py-2 -mb-px transition duration-150 ease-in-out focus:outline-none ml-6">
+                        Courses History
+                    </button>
+                    <button id="tab-plan" data-tab="plan"
+                        class="tab-link px-4 py-2 -mb-px transition duration-150 ease-in-out focus:outline-none ml-6">
+                        Current Plan
+                    </button>
+                </div>
+
+                <div id="content-profile" class="tab-content">
+                    <div class="flex items-center mb-10">
+                        <div class="relative">
+                            <img src="../images/673bb48270729f2c782ec3841fc23c0b7ae0bb2a.png" alt="Profile Picture"
+                                class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg">
+                            <div
+                                class="absolute bottom-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center border border-gray-100 shadow-md cursor-pointer">
+                                <i class="fa-solid fa-camera text-orange-500 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-xl space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" value="Mohamed"
+                                class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm py-2.5 px-4 focus:ring-vibrant-green focus:border-vibrant-green sm:text-sm">
+                        </div>
+
+                        <div class="flex space-x-6">
+                            <div class="flex-1">
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone
+                                    number</label>
+                                <input type="text" id="phone" value="+44 1245 572 135"
+                                    class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm py-2.5 px-4 focus:ring-vibrant-green focus:border-vibrant-green sm:text-sm">
+                            </div>
+                            <div class="flex-1">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" value="Jakegyll@gmail.com"
+                                    class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm py-2.5 px-4 focus:ring-vibrant-green focus:border-vibrant-green sm:text-sm">
+                            </div>
+                        </div>
+
+                        <button
+                            class="bg-vibrant-green text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-vibrant-green/90 transition mt-4">
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+                <div id="content-password" class="tab-content hidden">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-6">Set a new password</h3>
+                    <p class="text-sm text-gray-500 mb-8">Manage your password to ensure it is secure.</p>
+
+                    <div class="max-w-xl space-y-8">
+                        <div>
+                            <label for="old-password" class="block text-sm font-medium text-gray-700 mb-1">Old
+                                Password</label>
+                            <div class="relative">
+                                <input type="password" id="old-password" value="********"
+                                    class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm py-2.5 px-4 pr-10 focus:ring-vibrant-green focus:border-vibrant-green sm:text-sm">
+                                <i
+                                    class="fa-solid fa-eye-slash absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1">Minimum 8 characters</p>
+                        </div>
+
+                        <div>
+                            <label for="new-password" class="block text-sm font-medium text-gray-700 mb-1">New
+                                password</label>
+                            <div class="relative">
+                                <input type="password" id="new-password" value="********"
+                                    class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm py-2.5 px-4 pr-10 focus:ring-vibrant-green focus:border-vibrant-green sm:text-sm">
+                                <i
+                                    class="fa-solid fa-eye-slash absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1">Minimum 8 characters</p>
+                        </div>
+
+                        <button
+                            class="bg-vibrant-green text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-vibrant-green/90 transition">
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+                <div id="content-history" class="tab-content hidden">
+                    <div class="space-y-6">
+                        <div class="flex items-start p-4 bg-gray-50 rounded-xl shadow-sm border border-gray-200">
+                            <img src="../images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Course Thumbnail"
+                                class="w-32 h-20 object-cover rounded-lg mr-4">
+                            <div class="flex-grow">
+                                <span class="text-xs font-medium text-vibrant-green">Quran Memorization Program</span>
+                                <h4 class="text-base font-semibold text-deep-blue mt-1">Quran Memorization</h4>
+                                <p class="text-xs text-gray-500 mb-2">Jan 24, 2025</p>
+                                <p class="text-sm text-gray-600 mb-3">Looking for an amazing & well-functional
+                                    LearnPress
+                                    WordPress Theme? Online education...</p>
+                                <button
+                                    class="text-xs font-medium text-vibrant-green border border-vibrant-green/50 px-3 py-1.5 rounded-lg hover:bg-vibrant-green/10 transition">
+                                    Leave A Review
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 ml-4">
+                                <div class="flex items-center text-green-600 font-medium text-sm">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full mr-1"></span> Completed
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start p-4 bg-gray-50 rounded-xl shadow-sm border border-gray-200">
+                            <img src="../images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Course Thumbnail"
+                                class="w-32 h-20 object-cover rounded-lg mr-4">
+                            <div class="flex-grow">
+                                <span class="text-xs font-medium text-vibrant-green">Quran Memorization Program</span>
+                                <h4 class="text-base font-semibold text-deep-blue mt-1">Tajweed Rules</h4>
+                                <p class="text-xs text-gray-500 mb-2">Jan 24, 2025</p>
+                                <p class="text-sm text-gray-600 mb-3">Looking for an amazing & well-functional
+                                    LearnPress
+                                    WordPress Theme? Online education....</p>
+                                <button
+                                    class="text-xs font-medium text-deep-blue border border-deep-blue/50 px-3 py-1.5 rounded-lg hover:bg-deep-blue/10 transition">
+                                    View Details
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 ml-4">
+                                <div class="flex items-center text-blue-600 font-medium text-sm">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full mr-1"></span> In Progress
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start p-4 bg-gray-50 rounded-xl shadow-sm border border-gray-200">
+                            <img src="../images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Course Thumbnail"
+                                class="w-32 h-20 object-cover rounded-lg mr-4">
+                            <div class="flex-grow">
+                                <span class="text-xs font-medium text-vibrant-green">Quran Memorization Program</span>
+                                <h4 class="text-base font-semibold text-deep-blue mt-1">Tajweed Rules</h4>
+                                <p class="text-xs text-gray-500 mb-2">Jan 24, 2025</p>
+                                <p class="text-sm text-gray-600 mb-3">Looking for an amazing & well-functional
+                                    LearnPress
+                                    WordPress Theme? Online education....</p>
+                                <button
+                                    class="text-xs font-medium text-deep-blue border border-deep-blue/50 px-3 py-1.5 rounded-lg hover:bg-deep-blue/10 transition">
+                                    View Details
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 ml-4">
+                                <div class="flex items-center text-red-600 font-medium text-sm">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-1"></span> Not Started
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-2 mt-8">
+                        <button
+                            class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button
+                            class="w-8 h-8 rounded-full flex items-center justify-center bg-vibrant-green text-white font-medium text-xs">
+                            1
+                        </button>
+                        <button
+                            class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 transition font-medium text-xs">
+                            2
+                        </button>
+                        <button
+                            class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 transition font-medium text-xs">
+                            3
+                        </button>
+                        <button
+                            class="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="content-plan" class="tab-content hidden">
+                    <h3 class="text-2xl font-bold text-deep-blue mb-4">Your Current Subscription Plan</h3>
+                    <p class="text-gray-600 mb-8 max-w-xl">
+                        You are currently subscribed to the **Premium Monthly Plan**. Enjoy unlimited access to all
+                        courses, direct teacher messaging, and personalized progress reports.
+                    </p>
+
+                    <div class="bg-blue-50 border-l-4 border-vibrant-green p-6 rounded-lg max-w-md shadow-inner mb-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-lg font-bold text-deep-blue">Premium Monthly</span>
+                            <span class="text-xl font-extrabold text-vibrant-green">$49.99 / Month</span>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2">
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check-circle text-vibrant-green mr-2"></i> Unlimited Course
+                                Access</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check-circle text-vibrant-green mr-2"></i> Direct Teacher Support
+                            </li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check-circle text-vibrant-green mr-2"></i> Personalized Tajweed
+                                Correction</li>
+                            <li class="flex items-center"><i
+                                    class="fa-solid fa-check-circle text-vibrant-green mr-2"></i> 24/7 Priority Support
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <button
+                            class="bg-vibrant-green text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-vibrant-green/90 transition">
+                            Manage Subscription
+                        </button>
+                        <button
+                            class="bg-gray-200 text-gray-700 px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-gray-300 transition">
+                            Change Plan
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-link');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetTab = tab.getAttribute('data-tab');
+
+                    // إزالة حالة النشاط من جميع الأزرار
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // إخفاء جميع المحتويات
+                    contents.forEach(c => c.classList.add('hidden'));
+
+                    // تفعيل زر التبويب الحالي
+                    tab.classList.add('active');
+
+                    // إظهار المحتوى المطابق
+                    document.getElementById(`content-${targetTab}`).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

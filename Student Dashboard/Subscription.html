@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDQeM5F+pB5m9t8pX4sF9b7a4Gk/9A8N0/oB1oD/p0fA7/lA7dE/8tQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vibrant-green': '#009FBC',
+                        'deep-blue': '#1D3A5F',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background: #009FBC;
+        }
+
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-gray-50">
+    <div class="flex min-h-screen">
+
+        <aside
+            class="w-56 bg-gradient-to-b from-vibrant-green to-deep-blue text-white flex flex-col rounded-3xl shadow-xl m-4 sticky top-4 h-[calc(100vh-2rem)]">
+            <div class="flex flex-col items-center py-6 border-b border-white/10">
+ 
+                    <img src="../images/Gemini_Generated_Image_9401xh9401xh9401.png" class="h-16 w-16 rounded-2xl shadow-lg mb-3 flex items-center justify-center" alt="Logo">
+                <h1 class="text-base font-bold tracking-wide">Ascend</h1>
+
+
+            <nav class="flex-grow px-4 py-6 space-y-1 text-sm">
+                <a href="./index.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl bg-white/20 backdrop-blur-sm font-medium">
+                    <i class="fa-solid fa-th-large mr-3 text-base"></i> Dashboard
+                </a>
+                <a href="./MyCourses.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-book mr-3 text-base"></i> My Courses
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-layer-group mr-3 text-base"></i> Programs
+                </a>
+                <a href="./Schedule.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-regular fa-calendar mr-3 text-base"></i> Schedule
+                </a>
+                <a href="./Assessments.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-clipboard-list mr-3 text-base"></i> Assignments
+                </a>
+                <a href="./Subscription.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-crown mr-3 text-base"></i> Subscription
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-credit-card mr-3 text-base"></i> Payment Info
+                </a>
+                <a href="./Progress_Reports.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-chart-line mr-3 text-base"></i> Progress Reports
+                </a>
+                <a href="./Settings.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-cog mr-3 text-base"></i> Settings
+                </a>
+            </nav>
+
+            <div class="border-t border-white/10 px-4 py-4">
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-sign-out-alt mr-3 text-base"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-grow p-6 overflow-y-auto">
+
+            <header class="flex justify-between items-center mb-6">
+                <div class="relative w-80">
+                    <input type="text" placeholder="Search"
+                        class="w-full pl-10 pr-4 py-2.5 bg-white border-0 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-vibrant-green/30 shadow-sm">
+                    <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-bell text-gray-600"></i>
+                    </button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-envelope text-gray-600"></i>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 border-2 border-white shadow-md">
+                        </div>
+                        <span class="text-gray-800 font-semibold text-sm">Aly Ahmed</span>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Subscription</h2>
+                <div class="space-y-6">
+
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Basic</h3>
+                            <p class="text-sm text-gray-500 mb-4">Limited access</p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Every first chapter free
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Selection of free courses
+                                    (4)
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Free professional profile
+                                    and job board access
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Upgrade to earn
+                                    certificates
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-end w-full md:w-auto">
+                            <div
+                                class="bg-vibrant-green/10 text-deep-blue text-xl font-bold px-6 py-3 rounded-xl mb-4 text-right w-full md:w-auto">
+                                $40.99 / month
+                            </div>
+                            <button
+                                class="w-full md:w-auto px-8 py-3 text-deep-blue border-2 border-vibrant-green/50 rounded-xl font-semibold hover:bg-vibrant-green/10 transition">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Premium</h3>
+                            <p class="text-sm text-gray-500 mb-4">For individuals</p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Access our full content
+                                    library
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Shareable certificate upon
+                                    completion
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Access to course materials
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Go from zero to job ready
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Graded assignments and
+                                    exams
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Course support
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> More ways to learn to code
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-end w-full md:w-auto">
+                            <div
+                                class="bg-vibrant-green/10 text-deep-blue text-xl font-bold px-6 py-3 rounded-xl mb-4 text-right w-full md:w-auto">
+                                $80.99 / month
+                            </div>
+                            <button
+                                class="w-full md:w-auto px-8 py-3 text-deep-blue border-2 border-vibrant-green/50 rounded-xl font-semibold hover:bg-vibrant-green/10 transition">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Teams</h3>
+                            <p class="text-sm text-gray-500 mb-4">For teams of 2 and up</p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Everything in premium plus
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Access to course materials
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> Manage your group
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fa-solid fa-check text-vibrant-green mr-3"></i> View learning activity and
+                                    track progress
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col items-end w-full md:w-auto">
+                            <div
+                                class="bg-vibrant-green/10 text-deep-blue text-xl font-bold px-6 py-3 rounded-xl mb-4 text-right w-full md:w-auto">
+                                $139 / month
+                            </div>
+                            <button
+                                class="w-full md:w-auto px-8 py-3 text-deep-blue border-2 border-vibrant-green/50 rounded-xl font-semibold hover:bg-vibrant-green/10 transition">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

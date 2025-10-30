@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDQeM5F+pB5m9t8pX4sF9b7a4Gk/9A8N0/oB1oD/p0fA7/lA7dE/8tQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vibrant-green': '#009FBC',
+                        'deep-blue': '#1D3A5F',
+                        // الألوان المستخدمة في الجدول
+                        'schedule-purple': '#B845C9',
+                        'schedule-pink': '#EB3A84',
+                        'schedule-blue': '#3A82F6',
+                        'schedule-green': '#34D399',
+                        'schedule-orange': '#F97316',
+                        'schedule-red': '#EF4444',
+                        'card-orange': '#F97316',
+                        'card-green': '#10B981',
+                        'card-blue': '#3B82F6',
+                        'card-pink': '#EC4899',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background: #009FBC;
+        }
+
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-gray-50">
+    <div class="flex min-h-screen">
+
+        <aside
+            class="w-56 bg-gradient-to-b from-vibrant-green to-deep-blue text-white flex flex-col rounded-3xl shadow-xl m-4 sticky top-4 h-[calc(100vh-2rem)]">
+            <div class="flex flex-col items-center py-6 border-b border-white/10">
+ 
+                    <img src="../images/Gemini_Generated_Image_9401xh9401xh9401.png" class="h-16 w-16 rounded-2xl shadow-lg mb-3 flex items-center justify-center" alt="Logo">
+                <h1 class="text-base font-bold tracking-wide">Ascend</h1>
+
+
+            <nav class="flex-grow px-4 py-6 space-y-1 text-sm">
+                <a href="./index.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl bg-white/20 backdrop-blur-sm font-medium">
+                    <i class="fa-solid fa-th-large mr-3 text-base"></i> Dashboard
+                </a>
+                <a href="./MyCourses.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-book mr-3 text-base"></i> My Courses
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-layer-group mr-3 text-base"></i> Programs
+                </a>
+                <a href="./Schedule.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-regular fa-calendar mr-3 text-base"></i> Schedule
+                </a>
+                <a href="./Assessments.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-clipboard-list mr-3 text-base"></i> Assignments
+                </a>
+                <a href="./Subscription.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-crown mr-3 text-base"></i> Subscription
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-credit-card mr-3 text-base"></i> Payment Info
+                </a>
+                <a href="./Progress_Reports.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-chart-line mr-3 text-base"></i> Progress Reports
+                </a>
+                <a href="./Settings.html"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-cog mr-3 text-base"></i> Settings
+                </a>
+            </nav>
+
+            <div class="border-t border-white/10 px-4 py-4">
+                <a href="#"
+                    class="flex items-center px-4 py-2.5 rounded-xl hover:bg-white/10 transition opacity-80 hover:opacity-100">
+                    <i class="fa-solid fa-sign-out-alt mr-3 text-base"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-grow p-6 overflow-y-auto">
+
+            <header class="flex justify-between items-center mb-6">
+                <div class="relative w-80">
+                    <input type="text" placeholder="Search"
+                        class="w-full pl-10 pr-4 py-2.5 bg-white border-0 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-vibrant-green/30 shadow-sm">
+                    <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-bell text-gray-600"></i>
+                    </button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center hover:shadow-md transition">
+                        <i class="fa-regular fa-envelope text-gray-600"></i>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 border-2 border-white shadow-md">
+                        </div>
+                        <span class="text-gray-800 font-semibold text-sm">Aly Ahmed</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="flex space-x-12">
+                        <div class="flex flex-col items-center">
+                            <span class="text-gray-400 text-sm mb-4">SUN</span>
+                            <span class="text-3xl font-bold text-gray-800">8</span>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <span class="text-schedule-purple text-sm mb-4 font-bold">MON</span>
+                            <span
+                                class="text-3xl font-bold text-white w-12 h-12 rounded-full flex items-center justify-center bg-schedule-purple -mt-1 shadow-md">9</span>
+                            <div class="mt-6 space-y-2 w-32">
+                                <div
+                                    class="bg-schedule-purple/20 border-l-4 border-schedule-purple rounded-md p-2 text-xs">
+                                    <p class="font-semibold text-schedule-purple">9:00 AM</p>
+                                    <p class="text-gray-600">11:00 AM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <span class="text-gray-400 text-sm mb-4">TUE</span>
+                            <span class="text-3xl font-bold text-gray-800">10</span>
+                            <div class="mt-6 space-y-2 w-32">
+                                <div
+                                    class="bg-schedule-purple/20 border-l-4 border-schedule-purple rounded-md p-2 text-xs">
+                                    <p class="font-semibold text-schedule-purple">9:00 AM</p>
+                                    <p class="text-gray-600">11:00 AM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <span class="text-gray-400 text-sm mb-4">WED</span>
+                            <span class="text-3xl font-bold text-gray-800">11</span>
+                            <div class="mt-6 space-y-2 w-32">
+                                <div
+                                    class="bg-schedule-purple/20 border-l-4 border-schedule-purple rounded-md p-2 text-xs mb-4">
+                                    <p class="font-semibold text-schedule-purple">9:00 AM</p>
+                                    <p class="text-gray-600">11:00 AM</p>
+                                </div>
+                                <div class="bg-schedule-pink/20 border-l-4 border-schedule-pink rounded-md p-2 text-xs">
+                                    <p class="font-semibold text-schedule-pink">9:00 PM</p>
+                                    <p class="text-gray-600">11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <span class="text-gray-400 text-sm mb-4">THU</span>
+                            <span class="text-3xl font-bold text-gray-800">12</span>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <span class="text-gray-400 text-sm mb-4">FRI</span>
+                            <span class="text-3xl font-bold text-gray-800">13</span>
+                            <div class="mt-6 space-y-2 w-32">
+                                <div class="bg-schedule-pink/20 border-l-4 border-schedule-pink rounded-md p-2 text-xs">
+                                    <p class="font-semibold text-schedule-pink">9:00 PM</p>
+                                    <p class="text-gray-600">11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center">
+                            <span class="text-gray-400 text-sm mb-4">SAT</span>
+                            <span class="text-3xl font-bold text-gray-800">14</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-6 border-gray-100">
+
+                <div class="flex space-x-4">
+                    <div class="w-1/5 bg-gray-50 p-4 rounded-xl shadow-md border-t-4 border-card-orange">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="relative w-12 h-12">
+                                <svg class="progress-ring w-full h-full" viewBox="0 0 36 36">
+                                    <circle class="progress-ring-circle" stroke="#E5E7EB" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18"></circle>
+                                    <circle class="progress-ring-circle" stroke="#F97316" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18" stroke-dasharray="100.53" stroke-dashoffset="85.45"
+                                        style="transition: stroke-dashoffset 0.35s;"></circle>
+                                </svg>
+                                <span
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-card-orange">15%</span>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600 p-1 rounded-full"><i
+                                    class="fas fa-ellipsis-v"></i></button>
+                            <span
+                                class="absolute top-0 right-0 mt-3 mr-3 text-xs bg-card-orange text-white px-2 py-0.5 rounded-full font-medium">Details</span>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-800 mb-1">Intermediate Hifz Course</h4>
+                        <p class="text-xs text-gray-500">Tajweed & Recitation</p>
+                    </div>
+
+                    <div class="w-1/5 bg-gray-50 p-4 rounded-xl shadow-md border-t-4 border-card-green">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="relative w-12 h-12">
+                                <svg class="progress-ring w-full h-full" viewBox="0 0 36 36">
+                                    <circle class="progress-ring-circle" stroke="#E5E7EB" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18"></circle>
+                                    <circle class="progress-ring-circle" stroke="#10B981" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18" stroke-dasharray="100.53" stroke-dashoffset="68.36"
+                                        style="transition: stroke-dashoffset 0.35s;"></circle>
+                                </svg>
+                                <span
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-card-green">32%</span>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600 p-1 rounded-full"><i
+                                    class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-800 mb-1">Intermediate Hifz Course</h4>
+                        <p class="text-xs text-gray-500">Tajweed & Recitation</p>
+                    </div>
+
+                    <div class="w-1/5 bg-gray-50 p-4 rounded-xl shadow-md border-t-4 border-card-blue">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="relative w-12 h-12">
+                                <svg class="progress-ring w-full h-full" viewBox="0 0 36 36">
+                                    <circle class="progress-ring-circle" stroke="#E5E7EB" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18"></circle>
+                                    <circle class="progress-ring-circle" stroke="#3B82F6" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18" stroke-dasharray="100.53" stroke-dashoffset="79.42"
+                                        style="transition: stroke-dashoffset 0.35s;"></circle>
+                                </svg>
+                                <span
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-card-blue">21%</span>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600 p-1 rounded-full"><i
+                                    class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-800 mb-1">Intermediate Hifz Course</h4>
+                        <p class="text-xs text-gray-500">Tajweed & Recitation</p>
+                    </div>
+
+                    <div class="w-1/5 bg-gray-50 p-4 rounded-xl shadow-md border-t-4 border-card-pink">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="relative w-12 h-12">
+                                <svg class="progress-ring w-full h-full" viewBox="0 0 36 36">
+                                    <circle class="progress-ring-circle" stroke="#E5E7EB" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18"></circle>
+                                    <circle class="progress-ring-circle" stroke="#EC4899" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18" stroke-dasharray="100.53" stroke-dashoffset="36.19"
+                                        style="transition: stroke-dashoffset 0.35s;"></circle>
+                                </svg>
+                                <span
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-card-pink">64%</span>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600 p-1 rounded-full"><i
+                                    class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-800 mb-1">Intermediate Hifz Course</h4>
+                        <p class="text-xs text-gray-500">Tajweed & Recitation</p>
+                    </div>
+
+                    <div class="w-1/5 bg-gray-50 p-4 rounded-xl shadow-md border-t-4 border-card-pink">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="relative w-12 h-12">
+                                <svg class="progress-ring w-full h-full" viewBox="0 0 36 36">
+                                    <circle class="progress-ring-circle" stroke="#E5E7EB" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18"></circle>
+                                    <circle class="progress-ring-circle" stroke="#EC4899" stroke-width="3" fill="none"
+                                        r="16" cx="18" cy="18" stroke-dasharray="100.53" stroke-dashoffset="36.19"
+                                        style="transition: stroke-dashoffset 0.35s;"></circle>
+                                </svg>
+                                <span
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-card-pink">64%</span>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600 p-1 rounded-full"><i
+                                    class="fas fa-ellipsis-v"></i></button>
+                            <span
+                                class="absolute top-0 right-0 mt-3 mr-3 text-xs bg-card-pink text-white px-2 py-0.5 rounded-full font-medium">Join</span>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-800 mb-1">Intermediate Hifz Course</h4>
+                        <p class="text-xs text-gray-500">Tajweed & Recitation</p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
