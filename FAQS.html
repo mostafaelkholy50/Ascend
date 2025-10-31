@@ -20,38 +20,77 @@
 <body>
     <!-- Header -->
     <header class="shadow-md bg-white sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex justify-between items-center">
-            <a href="#" class="flex items-center py-5">
-                <img src="./images/s 1.png" alt="Ascend Quran Academy Logo" class="h-16 w-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center py-3 sm:py-5">
+                <img src="./images/Gemini_Generated_Image_pez0qlpez0qlpez0.png" alt="Ascend Quran Academy Logo"
+                    class="h-12 sm:h-16 w-auto">
             </a>
 
-            <nav class="hidden md:flex items-center space-x-8 text-lg">
-                <a href="./index.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Home</a>
-                <a href="./Our_Programs.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
-                <a href="./Our_Teachers.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
-                <a href="./Courses.html" class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Courses</a>
+            <nav id="mobile-menu" class="hidden md:flex items-center space-x-4 lg:space-x-8 text-base lg:text-lg">
+                <a href="./index.html"
+                    class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Home</a>
+                <a href="./Our_Programs.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
+                <a href="./Our_Teachers.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
+                <a href="./Courses.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Courses</a>
                 <a href="#" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">About Us</a>
-                <a href="./Contact.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
+                <a href="./Contact.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
-                <a href="./login.html" class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden sm:flex font-semibold text-lg">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <a href="./login.html"
+                    class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden lg:flex font-semibold text-base lg:text-lg">
+                    <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
                     </svg>
                     <span>Login</span>
                 </a>
 
-                <a href="#" class="bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-lg shadow-md">
+                <a href="#"
+                    class="bg-[#1E90A0] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-sm lg:text-lg shadow-md">
                     Enroll Now
                 </a>
 
-                <button class="md:hidden p-2 text-gray-600 hover:text-teal-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <button id="menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-teal-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
+        </div>
+
+        <div id="mobile-nav" class="hidden md:hidden bg-white border-t border-gray-200">
+            <nav class="px-4 py-4 space-y-3">
+                <a href="./index.html"
+                    class="block text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium py-2">Home</a>
+                <a href="./Our_Programs.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Programs</a>
+                <a href="./Our_Teachers.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Teachers</a>
+                <a href="./Courses.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Courses</a>
+                <a href="#"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">About
+                    Us</a>
+                <a href="./Contact.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Contact</a>
+                <a href="./login.html"
+                    class="block text-yellow-600 hover:text-yellow-700 transition duration-150 font-semibold py-2">Login</a>
+                <a href="#"
+                    class="block bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 font-semibold text-center sm:hidden">
+                    Enroll Now
+                </a>
+            </nav>
         </div>
     </header>
 <main class="py-20 bg-gray-50">
@@ -342,5 +381,41 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('testimonials-slider');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
 
+        if (slider && prevButton && nextButton) {
+            // قيمة التمرير = عرض كارد واحد + المسافة (w-80 + space-x-6)
+            // تقريباً 320 بكسل (w-80) + 24 بكسل (space-x-6) = 344 بكسل. سنستخدم قيمة تقريبية
+            const scrollAmount = 350;
+
+            nextButton.addEventListener('click', () => {
+                slider.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            prevButton.addEventListener('click', () => {
+                slider.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // كود لتفعيل قائمة الهاتف (Mobile Menu)
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
 </html>

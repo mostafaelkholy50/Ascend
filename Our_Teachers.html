@@ -7,23 +7,39 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Our Teachers - Ascend Quran Academy</title>
 </head>
+<style>
+  /* hide scrollbar cross-browser */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE + Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  /* iOS smooth scrolling */
+  .touch-smooth {
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
 
 <body class="bg-gray-50">
 
     <!-- Header -->
     <header class="shadow-md bg-white sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex justify-between items-center">
-            <a href="#" class="flex items-center py-5">
-                <img src="./images/s 1.png" alt="Ascend Quran Academy Logo" class="h-16 w-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center py-3 sm:py-5">
+                <img src="./images/Gemini_Generated_Image_pez0qlpez0qlpez0.png" alt="Ascend Quran Academy Logo"
+                    class="h-12 sm:h-16 w-auto">
             </a>
 
-            <nav class="hidden md:flex items-center space-x-8 text-lg">
+            <nav id="mobile-menu" class="hidden md:flex items-center space-x-4 lg:space-x-8 text-base lg:text-lg">
                 <a href="./index.html"
-                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Home</a>
+                    class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Home</a>
                 <a href="./Our_Programs.html"
                     class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
-                <a href="#" class="text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Our
-                    Teachers</a>
+                <a href="./Our_Teachers.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
                 <a href="./Courses.html"
                     class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Courses</a>
                 <a href="#" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">About Us</a>
@@ -31,10 +47,10 @@
                     class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-2 sm:space-x-4">
                 <a href="./login.html"
-                    class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden sm:flex font-semibold text-lg">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden lg:flex font-semibold text-base lg:text-lg">
+                    <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
@@ -44,11 +60,11 @@
                 </a>
 
                 <a href="#"
-                    class="bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-lg shadow-md">
+                    class="bg-[#1E90A0] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-sm lg:text-lg shadow-md">
                     Enroll Now
                 </a>
 
-                <button class="md:hidden p-2 text-gray-600 hover:text-teal-800">
+                <button id="menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-teal-800">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -56,6 +72,32 @@
                     </svg>
                 </button>
             </div>
+        </div>
+
+        <div id="mobile-nav" class="hidden md:hidden bg-white border-t border-gray-200">
+            <nav class="px-4 py-4 space-y-3">
+                <a href="./index.html"
+                    class="block text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium py-2">Home</a>
+                <a href="./Our_Programs.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Programs</a>
+                <a href="./Our_Teachers.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Teachers</a>
+                <a href="./Courses.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Courses</a>
+                <a href="#"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">About
+                    Us</a>
+                <a href="./Contact.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Contact</a>
+                <a href="./login.html"
+                    class="block text-yellow-600 hover:text-yellow-700 transition duration-150 font-semibold py-2">Login</a>
+                <a href="#"
+                    class="block bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 font-semibold text-center sm:hidden">
+                    Enroll Now
+                </a>
+            </nav>
         </div>
     </header>
     <section class="relative h-[600px] bg-cover bg-center"
@@ -80,111 +122,109 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-1">
-                    What Makes Our Teachers <span class="text-yellow-500">Exceptional</span>
-                </h2>
-                <div class="w-32 h-1 bg-yellow-400"></div>
-            </div>
+ <!-- What Makes Our Teachers -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-1">
+        What Makes Our Teachers <span class="text-yellow-500">Exceptional</span>
+      </h2>
+      <div class="w-32 h-1 bg-yellow-400"></div>
+    </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-gray-50 p-6 rounded-lg text-center shadow-lg">
-                    <div class="flex justify-center mb-4">
-                        <img src="./images/streamline-emojis_graduation-cap.png" alt="Graduation Cap Icon"
-                            class="h-16 w-16 mx-auto mb-2">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Certified Experts</h3>
-                    <p class="text-gray-600 text-sm">
-                        All teachers hold recognized ijazah or academic certificates in Quran and Arabic studies.
-                    </p>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-lg text-center shadow-lg">
-                    <div class="flex justify-center mb-4">
-                        <img src="./images/icon-park_communication.png" alt="Communication Icon"
-                            class="h-16 w-16 mx-auto mb-2">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Fluent Communication</h3>
-                    <p class="text-gray-600 text-sm">
-                        Our instructors speak English fluently and are trained to teach both kids and adults.
-                    </p>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-lg text-center shadow-lg">
-                    <div class="flex justify-center mb-4">
-                        <img src="./images/mdi_love.png" alt="Love and Care Icon" class="h-16 w-16 mx-auto mb-2">
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dedicated & Caring</h3>
-                    <p class="text-gray-600 text-sm">
-                        They guide each student with patience, passion, and respect for individual learning needs.
-                    </p>
-                </div>
-            </div>
+    <!-- mobile/tablet: horizontal scroll | lg+: grid -->
+    <div class="flex lg:grid lg:grid-cols-3 gap-6 overflow-x-auto hide-scrollbar touch-smooth snap-x py-3">
+      <div class="bg-gray-50 p-6 rounded-lg text-center shadow-lg min-w-[85vw] sm:min-w-[70vw] md:min-w-[360px] lg:min-w-0 flex-shrink-0 snap-center">
+        <div class="flex justify-center mb-4">
+          <img src="./images/streamline-emojis_graduation-cap.png" alt="Graduation Cap Icon" class="h-16 w-16 mx-auto mb-2">
         </div>
-    </section>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Certified Experts</h3>
+        <p class="text-gray-600 text-sm w-60">
+          All teachers hold recognized ijazah or academic certificates in Quran and Arabic studies.
+        </p>
+      </div>
 
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-[#1E7B7B] mb-1">
-                    Meet Our Teachers
-                </h2>
-                <div class="w-32 h-1 bg-yellow-400"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-                    <img src="./images/teacher1.jpg" alt="Sheikh Ahmad Al-Masri" class="h-64 w-full object-cover">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sheikh Ahmad Al-Masri</h3>
-                        <p class="text-[#1E90A0] text-sm font-medium mb-2">Tajweed & Quran Memorization</p>
-                        <p class="text-gray-600 text-xs mb-3">8+ years of teaching Quran online</p>
-                        <a href="#" class="inline-flex items-center text-[#1E90A0] text-sm font-medium hover:underline">
-                            View profile
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-                    <img src="./images/teacher2.jpg" alt="Sheikh Ahmad Al-Masri" class="h-64 w-full object-cover">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sheikh Ahmad Al-Masri</h3>
-                        <p class="text-[#1E90A0] text-sm font-medium mb-2">Tajweed & Quran Memorization</p>
-                        <p class="text-gray-600 text-xs mb-3">8+ years of teaching Quran online</p>
-                        <a href="#" class="inline-flex items-center text-[#1E90A0] text-sm font-medium hover:underline">
-                            View profile
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-                    <img src="./images/teacher3.jpg" alt="Sheikh Ahmad Al-Masri" class="h-64 w-full object-cover">
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-gray-900 mb-1">Sheikh Ahmad Al-Masri</h3>
-                        <p class="text-[#1E90A0] text-sm font-medium mb-2">Tajweed & Quran Memorization</p>
-                        <p class="text-gray-600 text-xs mb-3">8+ years of teaching Quran online</p>
-                        <a href="#" class="inline-flex items-center text-[#1E90A0] text-sm font-medium hover:underline">
-                            View profile
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="bg-gray-50 p-6 rounded-lg text-center shadow-lg min-w-[85vw] sm:min-w-[70vw] md:min-w-[360px] lg:min-w-0 flex-shrink-0 snap-center">
+        <div class="flex justify-center mb-4">
+          <img src="./images/icon-park_communication.png" alt="Communication Icon" class="h-16 w-16 mx-auto mb-2">
         </div>
-    </section>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Fluent Communication</h3>
+        <p class="text-gray-600 text-sm w-60">
+          Our instructors speak English fluently and are trained to teach both kids and adults.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-lg text-center shadow-lg min-w-[85vw] sm:min-w-[70vw] md:min-w-[360px] lg:min-w-0 flex-shrink-0 snap-center">
+        <div class="flex justify-center mb-4">
+          <img src="./images/mdi_love.png" alt="Love and Care Icon" class="h-16 w-16 mx-auto mb-2">
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Dedicated & Caring</h3>
+        <p class="text-gray-600 text-sm w-60">
+          They guide each student with patience, passion, and respect for individual learning needs.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet Our Teachers -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-[#1E7B7B] mb-1">Meet Our Teachers</h2>
+      <div class="w-32 h-1 bg-yellow-400"></div>
+    </div>
+
+    <!-- mobile/tablet: horizontal scroll | lg+: grid -->
+    <div class="flex lg:grid lg:grid-cols-3 gap-6 overflow-x-auto hide-scrollbar touch-smooth snap-x py-3">
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300 min-w-[85vw] sm:min-w-[70vw] md:min-w-[360px] lg:min-w-0 flex-shrink-0 snap-center">
+        <img src="./images/teacher1.jpg" alt="Sheikh Ahmad Al-Masri" class="h-64 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-gray-900 mb-1">Sheikh Ahmad Al-Masri</h3>
+          <p class="text-[#1E90A0] text-sm font-medium mb-2">Tajweed & Quran Memorization</p>
+          <p class="text-gray-600 text-xs mb-3">8+ years of teaching Quran online</p>
+          <a href="#" class="inline-flex items-center text-[#1E90A0] text-sm font-medium hover:underline">
+            View profile
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300 min-w-[85vw] sm:min-w-[70vw] md:min-w-[360px] lg:min-w-0 flex-shrink-0 snap-center">
+        <img src="./images/teacher2.jpg" alt="Sheikh Ahmad Al-Masri" class="h-64 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-gray-900 mb-1">Sheikh Ahmad Al-Masri</h3>
+          <p class="text-[#1E90A0] text-sm font-medium mb-2">Tajweed & Quran Memorization</p>
+          <p class="text-gray-600 text-xs mb-3">8+ years of teaching Quran online</p>
+          <a href="#" class="inline-flex items-center text-[#1E90A0] text-sm font-medium hover:underline">
+            View profile
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300 min-w-[85vw] sm:min-w-[70vw] md:min-w-[360px] lg:min-w-0 flex-shrink-0 snap-center">
+        <img src="./images/teacher3.jpg" alt="Sheikh Ahmad Al-Masri" class="h-64 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-bold text-gray-900 mb-1">Sheikh Ahmad Al-Masri</h3>
+          <p class="text-[#1E90A0] text-sm font-medium mb-2">Tajweed & Quran Memorization</p>
+          <p class="text-gray-600 text-xs mb-3">8+ years of teaching Quran online</p>
+          <a href="#" class="inline-flex items-center text-[#1E90A0] text-sm font-medium hover:underline">
+            View profile
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- CTA Section -->
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -304,5 +344,41 @@
     </footer>
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('testimonials-slider');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
 
+        if (slider && prevButton && nextButton) {
+            // قيمة التمرير = عرض كارد واحد + المسافة (w-80 + space-x-6)
+            // تقريباً 320 بكسل (w-80) + 24 بكسل (space-x-6) = 344 بكسل. سنستخدم قيمة تقريبية
+            const scrollAmount = 350;
+
+            nextButton.addEventListener('click', () => {
+                slider.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            prevButton.addEventListener('click', () => {
+                slider.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // كود لتفعيل قائمة الهاتف (Mobile Menu)
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
 </html>

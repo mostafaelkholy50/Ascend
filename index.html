@@ -22,158 +22,203 @@
 
 <body>
 
-    <!-- Header -->
     <header class="shadow-md bg-white sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex justify-between items-center">
-            <a href="#" class="flex items-center py-5">
-                <img src="./images/Gemini_Generated_Image_pez0qlpez0qlpez0.png" alt="Ascend Quran Academy Logo" class="h-16 w-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center py-3 sm:py-5">
+                <img src="./images/Gemini_Generated_Image_pez0qlpez0qlpez0.png" alt="Ascend Quran Academy Logo"
+                    class="h-12 sm:h-16 w-auto">
             </a>
 
-            <nav class="hidden md:flex items-center space-x-8 text-lg">
-                <a href="./index.html" class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Home</a>
-                <a href="./Our_Programs.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
-                <a href="./Our_Teachers.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
-                <a href="./Courses.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Courses</a>
+            <nav id="mobile-menu" class="hidden md:flex items-center space-x-4 lg:space-x-8 text-base lg:text-lg">
+                <a href="./index.html"
+                    class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Home</a>
+                <a href="./Our_Programs.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
+                <a href="./Our_Teachers.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
+                <a href="./Courses.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Courses</a>
                 <a href="#" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">About Us</a>
-                <a href="./Contact.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
+                <a href="./Contact.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
-                <a href="./login.html" class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden sm:flex font-semibold text-lg">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <a href="./login.html"
+                    class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden lg:flex font-semibold text-base lg:text-lg">
+                    <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
                     </svg>
                     <span>Login</span>
                 </a>
 
-                <a href="#" class="bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-lg shadow-md">
+                <a href="#"
+                    class="bg-[#1E90A0] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-sm lg:text-lg shadow-md">
                     Enroll Now
                 </a>
 
-                <button class="md:hidden p-2 text-gray-600 hover:text-teal-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <button id="menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-teal-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
+
+        <div id="mobile-nav" class="hidden md:hidden bg-white border-t border-gray-200">
+            <nav class="px-4 py-4 space-y-3">
+                <a href="./index.html"
+                    class="block text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium py-2">Home</a>
+                <a href="./Our_Programs.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Programs</a>
+                <a href="./Our_Teachers.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Teachers</a>
+                <a href="./Courses.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Courses</a>
+                <a href="#"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">About
+                    Us</a>
+                <a href="./Contact.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Contact</a>
+                <a href="./login.html"
+                    class="block text-yellow-600 hover:text-yellow-700 transition duration-150 font-semibold py-2">Login</a>
+                <a href="#"
+                    class="block bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 font-semibold text-center sm:hidden">
+                    Enroll Now
+                </a>
+            </nav>
+        </div>
     </header>
     <section class="relative pt-16 pb-24 bg-white overflow-hidden">
-
         <div
-            class="absolute inset-0 top-0 left-0 w-full h-[70%] md:h-[80%] opacity-10 bg-repeat bg-center bg-[url('./images/Group.png')]">
+            class="absolute inset-0 top-0 left-0 w-full h-[60%] opacity-10 bg-repeat bg-center bg-[url('./images/Group.png')]">
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <!-- هنا الترتيب بيتبدل حسب حجم الشاشة -->
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-8">
 
-            <div class="lg:flex lg:items-center pb-12">
-                <div class="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                <!-- النص -->
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h1
+                        class="text-[16px] sm:text-[18px] md:text-[28px] lg:text-[32px] font-bold text-gray-900 leading-snug mb-4">
                         Learn Quran & Arabic the Smart Way — Anytime, Anywhere!
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8 max-w-lg">
+
+                    <p
+                        class="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-gray-600 mb-6 leading-relaxed max-w-md mx-auto md:mx-0">
                         Join thousands of global learners mastering Quran recitation and Arabic with certified native
-                        teachers—interactive, flexible, and tailored for all ages
+                        teachers —
+                        interactive, flexible, and tailored for all ages.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <a href="#"
-                            class="bg-[#1E90A0] text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-teal-700 transition duration-300 shadow-lg text-center">
+                            class="bg-[#1E90A0] text-white px-5 py-2 rounded-md text-[13px] md:text-[14px] font-semibold hover:bg-teal-700 transition duration-300 shadow-md">
                             Schedule Free Assessment
                         </a>
                         <a href="#"
-                            class="border border-[#1E90A0] text-[#1E90A0] px-8 py-3 rounded-lg text-lg font-semibold hover:bg-teal-50 transition duration-300 text-center">
+                            class="border border-[#1E90A0] text-[#1E90A0] px-5 py-2 rounded-md text-[13px] md:text-[14px] font-semibold hover:bg-teal-50 transition duration-300">
                             Explore Our Programs
                         </a>
                     </div>
                 </div>
 
-                <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                <!-- الصورة -->
+                <div class="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
                     <img src="./images/OBJECTS.png" alt="Online Quran Class Illustration"
-                        class="max-w-full lg:max-w-lg h-auto">
+                        class="w-[320px] sm:w-[400px] md:w-[500px] lg:w-[580px] h-auto object-contain">
                 </div>
+
             </div>
-
         </div>
-        <div class="bg-gray-100 mt-12 py-8 w-full relative z[999] border-t border-b border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
 
-                    <div class="flex flex-col items-center text-center p-4">
-                        <img src="./images/Frame 67.png" alt="Instructor Icon" class="w-16 h-16 mb-2">
-                        <p class="text-3xl font-bold text-gray-900">300</p>
-                        <p class="text-sm text-gray-500">Certified Instructors</p>
+        <!-- الإحصائيات -->
+        <div class="bg-gray-100 mt-12 py-6 w-full border-t border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-4 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <img src="./images/Frame 67.png" alt="Instructor Icon" class="w-10 h-10 mx-auto mb-2">
+                        <p class="text-lg font-bold text-gray-900">300</p>
+                        <p class="text-xs text-gray-500">Certified Instructors</p>
                     </div>
-
-                    <div class="flex flex-col items-center text-center p-4">
-                        <img src="./images/Frame 67 (1).png" alt="Student Icon" class="w-16 h-16 mb-2">
-                        <p class="text-3xl font-bold text-gray-900">20,000+</p>
-                        <p class="text-sm text-gray-500">Happy Students</p>
+                    <div>
+                        <img src="./images/Frame 67 (1).png" alt="Student Icon" class="w-10 h-10 mx-auto mb-2">
+                        <p class="text-lg font-bold text-gray-900">20,000+</p>
+                        <p class="text-xs text-gray-500">Happy Students</p>
                     </div>
-
-                    <div class="flex flex-col items-center text-center p-4">
-                        <img src="./images/Frame 67 (2).png" alt="Courses Icon" class="w-16 h-16 mb-2">
-                        <p class="text-3xl font-bold text-gray-900">10,000+</p>
-                        <p class="text-sm text-gray-500">Classes Completed</p>
+                    <div>
+                        <img src="./images/Frame 67 (2).png" alt="Courses Icon" class="w-10 h-10 mx-auto mb-2">
+                        <p class="text-lg font-bold text-gray-900">10,000+</p>
+                        <p class="text-xs text-gray-500">Classes Completed</p>
                     </div>
-
-                    <div class="flex flex-col items-center text-center p-4">
-                        <img src="./images/Frame 67 (3).png" alt="User Icon" class="w-16 h-16 mb-2">
-                        <p class="text-3xl font-bold text-gray-900">100%</p>
-                        <p class="text-sm text-gray-500">Satisfaction Rate</p>
+                    <div>
+                        <img src="./images/Frame 67 (3).png" alt="User Icon" class="w-10 h-10 mx-auto mb-2">
+                        <p class="text-lg font-bold text-gray-900">100%</p>
+                        <p class="text-xs text-gray-500">Satisfaction Rate</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="mb-16 text-center">
-                <h3
-                    class="inline-block text-xl md:text-2xl font-extrabold text-[#38481B] border-b-4 border-yellow-400 pb-1">
-                    Value Pillars Section
-                </h3>
-                <p class="text-gray-600 mt-3 text-lg">
-                    What Makes Ascend Quran Academy Different.
-                </p>
-            </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
 
-                <div
-                    class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-[#1E90A0] hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-center">
-                    <img src="./images/quran-islam-svgrepo-com.png" alt="Quran Icon" class="w-20 h-20 mx-auto mb-6">
 
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Perfect Recitation</h4>
-                    <p class="text-gray-600 text-base">
-                        Master Tajweed and accurate Quran recitation through step-by-step personalized guidance.
-                    </p>
-                </div>
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
 
-                <div
-                    class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-[#1E90A0] hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-center">
-                    <img src="./images/graduation-cap-svgrepo-com.png" alt="Certified Teachers"
-                        class="w-20 h-20 mx-auto mb-6">
+    <!-- العنوان -->
+    <div class="mb-16 text-center">
+      <h3
+        class="inline-block text-xl md:text-2xl font-extrabold text-[#38481B] border-b-4 border-yellow-400 pb-1">
+        Value Pillars Section
+      </h3>
+      <p class="text-gray-600 mt-3 text-lg">
+        What Makes Ascend Quran Academy Different.
+      </p>
+    </div>
 
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Certified & Caring Teachers</h4>
-                    <p class="text-gray-600 text-base">
-                        Learn from qualified instructors dedicated to nurturing both skill and spirituality.
-                    </p>
-                </div>
+    <!-- الكروت -->
+    <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
+      <div
+        class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-t-4 border-[#1E90A0] hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-center flex-1 min-w-[280px] max-w-[350px]">
+        <img src="./images/quran-islam-svgrepo-com.png" alt="Quran Icon" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6">
+        <h4 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Perfect Recitation</h4>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Master Tajweed and accurate Quran recitation through step-by-step personalized guidance.
+        </p>
+      </div>
 
-                <div
-                    class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-[#1E90A0] hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-center">
-                    <img src="./images/laptop-svgrepo-com(1).png" alt="Online Learning" class="w-20 h-20 mx-auto mb-6">
+      <div
+        class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-t-4 border-[#1E90A0] hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-center flex-1 min-w-[280px] max-w-[350px]">
+        <img src="./images/graduation-cap-svgrepo-com.png" alt="Certified Teachers" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6">
+        <h4 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Certified & Caring Teachers</h4>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Learn from qualified instructors dedicated to nurturing both skill and spirituality.
+        </p>
+      </div>
 
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Flexible Online Learning</h4>
-                    <p class="text-gray-600 text-base">
-                        Study anytime, anywhere — tailored to your child's schedule and pace.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div
+        class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-t-4 border-[#1E90A0] hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 text-center flex-1 min-w-[280px] max-w-[350px]">
+        <img src="./images/laptop-svgrepo-com(1).png" alt="Online Learning" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6">
+        <h4 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Flexible Online Learning</h4>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Study anytime, anywhere — tailored to your child's schedule and pace.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
     <section class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -187,9 +232,9 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="flex space-x-6 overflow-x-auto pb-6 scrollbar-hide">
 
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
                     <img src="./images/Saly-1.png" alt="Quran Memorization" class="h-48 w-full object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-gray-900 mb-2">Quran Memorization</h4>
@@ -215,7 +260,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
                     <img src="./images/Sample 46.png" alt="Tajweed for Kids" class="h-48 w-full object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-gray-900 mb-2">Tajweed for Kids</h4>
@@ -241,7 +286,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
                     <img src="./images/Sample 26.png" alt="Arabic for Beginners" class="h-48 w-full object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-gray-900 mb-2">Arabic for Beginners</h4>
@@ -267,7 +312,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
                     <img src="./images/Sample 12.png" alt="Quranic Understanding" class="h-48 w-full object-cover">
                     <div class="p-4">
                         <h4 class="text-lg font-bold text-gray-900 mb-2">Quranic Understanding</h4>
@@ -292,6 +337,7 @@
                         </a>
                     </div>
                 </div>
+                <div class="flex-shrink-0 w-8"></div>
 
             </div>
 
@@ -312,11 +358,10 @@
             </div>
 
             <div class="relative">
-                <div id="teachers-slider"
-                    class="grid grid-cols-1 sm:grid-cols-2 md:flex md:justify-center md:space-x-6 gap-6 md:gap-0 pb-6">
+                <div id="teachers-slider" class="flex space-x-6 overflow-x-auto pb-6 scrollbar-hide">
 
                     <div
-                        class="flex-shrink-0 w-full sm:w-auto md:w-60 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer md:mr-6">
+                        class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer">
                         <div class="relative">
                             <img src="./images/Rectangle 16.png" alt="Amina Khalid" class="h-64 w-full object-cover">
                             <div
@@ -334,7 +379,7 @@
                     </div>
 
                     <div
-                        class="flex-shrink-0 w-full sm:w-auto md:w-60 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer md:mr-6">
+                        class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer">
                         <div class="relative">
                             <img src="./images/Rectangle 16 (1).png" alt="Ahmed Al-Mansoor"
                                 class="h-64 w-full object-cover">
@@ -353,7 +398,7 @@
                     </div>
 
                     <div
-                        class="flex-shrink-0 w-full sm:w-auto md:w-60 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer md:mr-6">
+                        class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer">
                         <div class="relative">
                             <img src="./images/Rectangle 16 (2).png" alt="Omar Hassan"
                                 class="h-64 w-full object-cover grayscale">
@@ -372,7 +417,7 @@
                     </div>
 
                     <div
-                        class="flex-shrink-0 w-full sm:w-auto md:w-60 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer">
+                        class="flex-shrink-0 w-72 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden text-center group cursor-pointer">
                         <div class="relative">
                             <img src="./images/Rectangle 16 (3).png" alt="Sara Al-Farouq"
                                 class="h-64 w-full object-cover">
@@ -389,6 +434,8 @@
                             <p class="text-sm text-gray-500">Kids Tajweed & Islamic Studies</p>
                         </div>
                     </div>
+
+                    <div class="flex-shrink-0 w-8"></div>
 
                 </div>
 
@@ -416,7 +463,7 @@
                         class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg border border-gray-100 p-6 border-t-4 border-teal-500">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
-                                <img src="./images/0ca37e42f826ca630defae6a807369b430125793.jpg" alt="Ahmed Aly"
+                                <img src="./images/55303ec65e745c6b2487d20f612495ff0b2eb5e6.jpg" alt="Ahmed Aly"
                                     class="w-12 h-12 rounded-full object-cover">
                                 <span class="font-semibold text-gray-900">Ahmed Aly</span>
                             </div>
@@ -499,7 +546,7 @@
                     <div class="flex-shrink-0 w-8"></div>
                 </div>
 
-                <button
+                <button id="prev-testimonial"
                     class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:shadow-lg focus:outline-none hidden md:block z-20">
                     <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -507,7 +554,7 @@
                         </path>
                     </svg>
                 </button>
-                <button
+                <button id="next-testimonial"
                     class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#1E90A0] rounded-full p-2 shadow-md hover:shadow-lg focus:outline-none hidden md:block z-20">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -635,7 +682,8 @@
 
                 <div class="col-span-2 lg:col-span-2">
                     <a href="#" class="inline-block mb-4">
-                        <img src="./images/Gemini_Generated_Image_pez0qlpez0qlpez0.png" alt="Ascend Quran Academy Logo" class="h-16 w-auto">
+                        <img src="./images/Gemini_Generated_Image_pez0qlpez0qlpez0.png" alt="Ascend Quran Academy Logo"
+                            class="h-16 w-auto">
                     </a>
                     <p class="text-gray-200 text-sm max-w-sm mt-4">
                         The leading online platform providing high-quality Quran and Arabic education with certified
@@ -651,7 +699,7 @@
                         <a href="#" class="text-white hover:text-yellow-400 transition duration-300">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
-                                    d="M12 2c-3.1 0-3.48.01-4.704.066-1.22.057-2.07.24-2.812.518-.732.277-1.34.664-1.939 1.263-.598.599-.986 1.207-1.263 1.94-.278.74-.46 1.59-.518 2.811C2.01 8.52 2 8.9 2 12s.01 3.48.066 4.704c.057 1.22.24 2.07.518 2.812.277.732.664 1.34 1.263 1.939.599.598 1.207.986 1.94 1.263.74.278 1.59.46 2.811.518C8.52 21.99 8.9 22 12 22s3.48-.01 4.704-.066c1.22-.057 2.07-.24 2.812-.518.732-.277 1.34-.664 1.939-1.263.598-.599 1.207-.986 1.94-1.263.74-.278 1.59-.46 2.811-.518C21.99 15.48 22 15.1 22 12s-.01-3.48-.066-4.704c-.057-1.22-.24-2.07-.518-2.812-.277-.732-.664-1.34-1.263-1.939-.599-.598-1.207-.986-1.94-1.263-.74-.278-1.59-.46-2.811-.518C15.48 2.01 15.1 2 12 2zm0 1.8c2.9.006 3.25.018 4.38.07c1.07.05 1.76.24 2.16.4.4.17.65.37.93.65.28.28.48.53.65.93.16.4.35 1.09.4 2.16.05 1.13.064 1.48.07 4.38s-.006 3.25-.07 4.38c-.05 1.07-.24 1.76-.4 2.16-.17.4-.37.65-.65.93-.28.28-.53.48-.93.65-.4.16-1.09.35-2.16.4-1.13.05-1.48.064-4.38.07s-3.25-.006-4.38-.07c-1.07-.05-1.76-.24-2.16-.4-.4-.17-.65-.37-.93-.65-.28-.28-.48-.53-.65-.93-.16-.4-.35-1.09-.4-2.16-.05-1.13-.064-1.48-.07-4.38s.006-3.25.07-4.38c.05-1.07.24-1.76.4-2.16.17-.4.37-.65.65-.93.28-.28.53-.48.93-.65.4-.16 1.09-.35 2.16-.4 1.13-.05 1.48-.064 4.38-.07zM12 6.8a5.2 5.2 0 100 10.4 5.2 5.2 0 000-10.4zM12 15.4a3.4 3.4 0 110-6.8 3.4 3.4 0 010 6.8zM17.2 5.7c-.4 0-.7.3-.7.7s.3.7.7.7.7-.3.7-.7-.3-.7-.7-.7z" />
+                                    d="M12 2c-3.1 0-3.48.01-4.704.066-1.22.057-2.07.24-2.812.518-.732.277-1.34.664-1.939 1.263-.598.599-.986 1.207-1.263 1.94-.278.74-.46 1.59-.518 2.811C2.01 8.52 2 8.9 2 12s.01 3.48.066 4.704c.057 1.22.24 2.07.518 2.812.277.732.664 1.34 1.263 1.939.599.598 1.207.986 1.94 1.263.74.278 1.59.46 2.811.518C8.52 21.99 8.9 22 12 22s3.48-.01 4.704-.066c1.22-.057 2.07-.24 2.812-.518.732-.277 1.34-.664 1.939-1.263.598-.599 1.207-.986 1.94-1.263.74-.278 1.59-.46 2.811-.518C21.99 15.48 22 15.1 22 12s-.01-3.48-.066-4.704c-.057-1.22-.24-2.07-.518-2.812-.277-.732-.664-1.34-1.263-1.939-.599-.598-1.207-.986-1.94-1.263-.74-.278-1.59-.46-2.811-.518C15.48 2.01 15.1 2 12 2zm0 1.8c2.9.006 3.25.018 4.38.07c1.07.05 1.76.24 2.16.4.4.17.65.37.93.65.28.28.48.53.65.93.16.4.35 1.09.4 2.16.05 1.13.064 1.48.07 4.38s-.006 3.25-.07 4.38c-.05 1.07-.24 1.76-.4 2.16-.17.4-.37.65-.65.93-.28.28-.53.48-.93.65-.4.16-1.09.35-2.16.4-1.13.05-1.48.064-4.38.07s-3.25-.006-4.38-.07c-1.07-.05-1.76-.24-2.16-.4-.4-.17-.65-.37-.93-.65-.28-.28-.48-.53-.65-.93-.16-.4-.35-1.09-.4-2.16-.05-1.13-.064-1.48-.07-4.38s.006-3.25.07-4.38c.05-1.07.24-1.76.4-2.16.17-.4.37-.65.65-.93.28.28.53.48.93.65.4-.16 1.09-.35 2.16-.4 1.13-.05 1.48-.064 4.38-.07zM12 6.8a5.2 5.2 0 100 10.4 5.2 5.2 0 000-10.4zM12 15.4a3.4 3.4 0 110-6.8 3.4 3.4 0 010 6.8zM17.2 5.7c-.4 0-.7.3-.7.7s.3.7.7.7.7-.3.7-.7-.3-.7-.7-.7z" />
                             </svg>
                         </a>
                         <a href="#" class="text-white hover:text-yellow-400 transition duration-300">
@@ -717,6 +765,44 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('testimonials-slider');
+            const prevButton = document.getElementById('prev-testimonial');
+            const nextButton = document.getElementById('next-testimonial');
+
+            if (slider && prevButton && nextButton) {
+                // قيمة التمرير = عرض كارد واحد + المسافة (w-80 + space-x-6)
+                // تقريباً 320 بكسل (w-80) + 24 بكسل (space-x-6) = 344 بكسل. سنستخدم قيمة تقريبية
+                const scrollAmount = 350;
+
+                nextButton.addEventListener('click', () => {
+                    slider.scrollBy({
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+
+                prevButton.addEventListener('click', () => {
+                    slider.scrollBy({
+                        left: -scrollAmount,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // كود لتفعيل قائمة الهاتف (Mobile Menu)
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+
+            if (menuToggle && mobileNav) {
+                menuToggle.addEventListener('click', () => {
+                    mobileNav.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

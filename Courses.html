@@ -11,38 +11,77 @@
 <body>
     <!-- Header -->
     <header class="shadow-md bg-white sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex justify-between items-center">
-            <a href="#" class="flex items-center py-5">
-                <img src="./images/s 1.png" alt="Ascend Quran Academy Logo" class="h-16 w-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center py-3 sm:py-5">
+                <img src="./images/Gemini_Generated_Image_pez0qlpez0qlpez0.png" alt="Ascend Quran Academy Logo"
+                    class="h-12 sm:h-16 w-auto">
             </a>
 
-            <nav class="hidden md:flex items-center space-x-8 text-lg">
-                <a href="./index.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Home</a>
-                <a href="./Our_Programs.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
-                <a href="./Our_Teachers.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
-                <a href="./Courses.html" class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Courses</a>
+            <nav id="mobile-menu" class="hidden md:flex items-center space-x-4 lg:space-x-8 text-base lg:text-lg">
+                <a href="./index.html"
+                    class="text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium border-b-2 border-[#1E90A0]">Home</a>
+                <a href="./Our_Programs.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Our Programs</a>
+                <a href="./Our_Teachers.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium ">Our Teachers</a>
+                <a href="./Courses.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Courses</a>
                 <a href="#" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">About Us</a>
-                <a href="./Contact.html" class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
+                <a href="./Contact.html"
+                    class="text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium">Contact</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
-                <a href="./login.html" class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden sm:flex font-semibold text-lg">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <a href="./login.html"
+                    class="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 transition duration-150 hidden lg:flex font-semibold text-base lg:text-lg">
+                    <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
                     </svg>
                     <span>Login</span>
                 </a>
 
-                <a href="#" class="bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-lg shadow-md">
+                <a href="#"
+                    class="bg-[#1E90A0] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-teal-700 transition duration-150 hidden sm:block font-semibold text-sm lg:text-lg shadow-md">
                     Enroll Now
                 </a>
 
-                <button class="md:hidden p-2 text-gray-600 hover:text-teal-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <button id="menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-teal-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
+        </div>
+
+        <div id="mobile-nav" class="hidden md:hidden bg-white border-t border-gray-200">
+            <nav class="px-4 py-4 space-y-3">
+                <a href="./index.html"
+                    class="block text-[#1E90A0] hover:text-[#1E90A0] transition duration-150 font-medium py-2">Home</a>
+                <a href="./Our_Programs.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Programs</a>
+                <a href="./Our_Teachers.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Our
+                    Teachers</a>
+                <a href="./Courses.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Courses</a>
+                <a href="#"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">About
+                    Us</a>
+                <a href="./Contact.html"
+                    class="block text-gray-700 hover:text-[#1E90A0] transition duration-150 font-medium py-2">Contact</a>
+                <a href="./login.html"
+                    class="block text-yellow-600 hover:text-yellow-700 transition duration-150 font-semibold py-2">Login</a>
+                <a href="#"
+                    class="block bg-[#1E90A0] text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition duration-150 font-semibold text-center sm:hidden">
+                    Enroll Now
+                </a>
+            </nav>
         </div>
     </header>
 <section class="py-12 bg-white">
@@ -133,200 +172,217 @@
                 </div>
             </aside>
 
-            <main class="lg:col-span-3">
-                <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<main class="lg:col-span-3">
+  <!-- grid: افتراضي (mobile) = 3 columns، gap صغير على الموبايل وكبير شوية على الشاشات الأكبر -->
+  <div class="grid grid-cols-3 gap-3 sm:gap-6">
+    <!-- card (كررها بنفس الشكل لباقي الكروت) -->
+    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
+      <div class="h-full">
+        <!-- صورة أصغر على الموبايل (h-20) وتكبر على الشاشات الأكبر (sm:h-40) -->
+        <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-20 sm:h-40 object-cover">
+        <div class="p-2 sm:p-4">
+          <!-- عنوان أصغر على الموبايل -->
+          <h3 class="text-sm sm:text-lg font-semibold text-gray-800 mb-1 truncate">Memorization For Beginners</h3>
+          <!-- وصف أصغر -->
+          <p class="text-gray-600 text-[11px] sm:text-xs mb-2">Start memorizing short surahs with guidance from certified Quran teachers.</p>
 
-                    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
-                        <div class="h-full">
-                            <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-40 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Memorization For Beginners</h3>
-                                <p class="text-gray-600 text-xs mb-3">Start memorizing short surahs with guidance from certified Quran teachers.</p>
-                                
-                                <div class="flex items-center text-gray-500 text-sm mb-3 space-x-4">
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
-                                        2Weeks
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
-                                        English
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
-                                        Beginner
-                                    </span>
-                                </div>
+          <div class="flex items-center text-gray-500 text-xs sm:text-sm mb-2 space-x-2 sm:space-x-4">
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
+              2Weeks
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
+              English
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
+              Beginner
+            </span>
+          </div>
 
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xl font-bold text-gray-900">35.0$</span>
-                                    <span class="text-sm line-through text-gray-500 mr-2">20.0$</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-lg sm:text-xl font-bold text-gray-900">35.0$</span>
+            <span class="text-[11px] sm:text-sm line-through text-gray-500 mr-2">20.0$</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
+      <div class="h-full">
+        <!-- صورة أصغر على الموبايل (h-20) وتكبر على الشاشات الأكبر (sm:h-40) -->
+        <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-20 sm:h-40 object-cover">
+        <div class="p-2 sm:p-4">
+          <!-- عنوان أصغر على الموبايل -->
+          <h3 class="text-sm sm:text-lg font-semibold text-gray-800 mb-1 truncate">Memorization For Beginners</h3>
+          <!-- وصف أصغر -->
+          <p class="text-gray-600 text-[11px] sm:text-xs mb-2">Start memorizing short surahs with guidance from certified Quran teachers.</p>
 
-                    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
-                        <div class="h-full">
-                            <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-40 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Intermediate Hifz Course</h3>
-                                <p class="text-gray-600 text-xs mb-3">Strengthen your memorization skills with structured revision and weekly assessments.</p>
-                                
-                                <div class="flex items-center text-gray-500 text-sm mb-3 space-x-4">
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
-                                        2Weeks
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
-                                        English
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
-                                        Beginner
-                                    </span>
-                                </div>
+          <div class="flex items-center text-gray-500 text-xs sm:text-sm mb-2 space-x-2 sm:space-x-4">
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
+              2Weeks
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
+              English
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
+              Beginner
+            </span>
+          </div>
 
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xl font-bold text-gray-900">Free</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-lg sm:text-xl font-bold text-gray-900">35.0$</span>
+            <span class="text-[11px] sm:text-sm line-through text-gray-500 mr-2">20.0$</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
+      <div class="h-full">
+        <!-- صورة أصغر على الموبايل (h-20) وتكبر على الشاشات الأكبر (sm:h-40) -->
+        <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-20 sm:h-40 object-cover">
+        <div class="p-2 sm:p-4">
+          <!-- عنوان أصغر على الموبايل -->
+          <h3 class="text-sm sm:text-lg font-semibold text-gray-800 mb-1 truncate">Memorization For Beginners</h3>
+          <!-- وصف أصغر -->
+          <p class="text-gray-600 text-[11px] sm:text-xs mb-2">Start memorizing short surahs with guidance from certified Quran teachers.</p>
 
-                    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
-                        <div class="h-full">
-                            <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-40 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Advanced Hifz Program</h3>
-                                <p class="text-gray-600 text-xs mb-3">Complete your memorization journey under supervision of certified Hafiz.</p>
-                                
-                                <div class="flex items-center text-gray-500 text-sm mb-3 space-x-4">
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
-                                        2Weeks
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
-                                        English
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
-                                        Beginner
-                                    </span>
-                                </div>
+          <div class="flex items-center text-gray-500 text-xs sm:text-sm mb-2 space-x-2 sm:space-x-4">
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
+              2Weeks
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
+              English
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
+              Beginner
+            </span>
+          </div>
 
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xl font-bold text-gray-900">35.0$</span>
-                                    <span class="text-sm line-through text-gray-500 mr-2">20.0$</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-lg sm:text-xl font-bold text-gray-900">35.0$</span>
+            <span class="text-[11px] sm:text-sm line-through text-gray-500 mr-2">20.0$</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
+      <div class="h-full">
+        <!-- صورة أصغر على الموبايل (h-20) وتكبر على الشاشات الأكبر (sm:h-40) -->
+        <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-20 sm:h-40 object-cover">
+        <div class="p-2 sm:p-4">
+          <!-- عنوان أصغر على الموبايل -->
+          <h3 class="text-sm sm:text-lg font-semibold text-gray-800 mb-1 truncate">Memorization For Beginners</h3>
+          <!-- وصف أصغر -->
+          <p class="text-gray-600 text-[11px] sm:text-xs mb-2">Start memorizing short surahs with guidance from certified Quran teachers.</p>
 
-                    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
-                        <div class="h-full">
-                            <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-40 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Intermediate Hifz Course</h3>
-                                <p class="text-gray-600 text-xs mb-3">Strengthen your memorization skills with structured revision and weekly assessments.</p>
-                                
-                                <div class="flex items-center text-gray-500 text-sm mb-3 space-x-4">
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
-                                        2Weeks
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
-                                        English
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
-                                        Beginner
-                                    </span>
-                                </div>
+          <div class="flex items-center text-gray-500 text-xs sm:text-sm mb-2 space-x-2 sm:space-x-4">
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
+              2Weeks
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
+              English
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
+              Beginner
+            </span>
+          </div>
 
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xl font-bold text-gray-900">35.0$</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-lg sm:text-xl font-bold text-gray-900">35.0$</span>
+            <span class="text-[11px] sm:text-sm line-through text-gray-500 mr-2">20.0$</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
+      <div class="h-full">
+        <!-- صورة أصغر على الموبايل (h-20) وتكبر على الشاشات الأكبر (sm:h-40) -->
+        <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-20 sm:h-40 object-cover">
+        <div class="p-2 sm:p-4">
+          <!-- عنوان أصغر على الموبايل -->
+          <h3 class="text-sm sm:text-lg font-semibold text-gray-800 mb-1 truncate">Memorization For Beginners</h3>
+          <!-- وصف أصغر -->
+          <p class="text-gray-600 text-[11px] sm:text-xs mb-2">Start memorizing short surahs with guidance from certified Quran teachers.</p>
 
-                    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
-                        <div class="h-full">
-                            <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-40 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Advanced Hifz Program</h3>
-                                <p class="text-gray-600 text-xs mb-3">Complete your memorization journey under supervision of certified Hafiz.</p>
-                                
-                                <div class="flex items-center text-gray-500 text-sm mb-3 space-x-4">
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
-                                        2Weeks
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
-                                        English
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
-                                        Beginner
-                                    </span>
-                                </div>
+          <div class="flex items-center text-gray-500 text-xs sm:text-sm mb-2 space-x-2 sm:space-x-4">
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
+              2Weeks
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
+              English
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
+              Beginner
+            </span>
+          </div>
 
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xl font-bold text-gray-900">35.0$</span>
-                                    <span class="text-sm line-through text-gray-500 mr-2">20.0$</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-lg sm:text-xl font-bold text-gray-900">35.0$</span>
+            <span class="text-[11px] sm:text-sm line-through text-gray-500 mr-2">20.0$</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
+      <div class="h-full">
+        <!-- صورة أصغر على الموبايل (h-20) وتكبر على الشاشات الأكبر (sm:h-40) -->
+        <img src="images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-20 sm:h-40 object-cover">
+        <div class="p-2 sm:p-4">
+          <!-- عنوان أصغر على الموبايل -->
+          <h3 class="text-sm sm:text-lg font-semibold text-gray-800 mb-1 truncate">Memorization For Beginners</h3>
+          <!-- وصف أصغر -->
+          <p class="text-gray-600 text-[11px] sm:text-xs mb-2">Start memorizing short surahs with guidance from certified Quran teachers.</p>
 
-                    <a href="order.html" class="block bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl">
-                        <div class="h-full">
-                            <img src="./images/16f75e5576780b777d75ebcbad5f47edd97ef4cb.jpg" alt="Quran Memorization Course" class="w-full h-40 object-cover">
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-1">Intermediate Hifz Course</h3>
-                                <p class="text-gray-600 text-xs mb-3">Strengthen your memorization skills with structured revision and weekly assessments.</p>
-                                
-                                <div class="flex items-center text-gray-500 text-sm mb-3 space-x-4">
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
-                                        2Weeks
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
-                                        English
-                                    </span>
-                                    <span class="flex items-center">
-                                        <svg class="w-4 h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
-                                        Beginner
-                                    </span>
-                                </div>
+          <div class="flex items-center text-gray-500 text-xs sm:text-sm mb-2 space-x-2 sm:space-x-4">
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z"></path></svg>
+              2Weeks
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-8a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1V9z" clip-rule="evenodd"></path></svg>
+              English
+            </span>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"></path></svg>
+              Beginner
+            </span>
+          </div>
 
-                                <div class="flex justify-between items-center mt-2">
-                                    <span class="text-xl font-bold text-gray-900">35.0$</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+          <div class="flex justify-between items-center mt-1">
+            <span class="text-lg sm:text-xl font-bold text-gray-900">35.0$</span>
+            <span class="text-[11px] sm:text-sm line-through text-gray-500 mr-2">20.0$</span>
+          </div>
+        </div>
+      </div>
+    </a>
 
-                <div class="flex justify-center items-center mt-12 space-x-2">
-                    <button class="px-4 py-2 text-gray-500 border border-gray-300 rounded-lg hover:bg-gray-100 disabled:opacity-50" disabled>
-                        &lt;
-                    </button>
-                    <a href="#" class="px-4 py-2 bg-gray-900 text-white rounded-lg">1</a>
-                    <a href="#" class="px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">2</a>
-                    <a href="#" class="px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100">3</a>
-                    <button class="px-4 py-2 text-gray-500 border border-gray-300 rounded-lg hover:bg-gray-100">
-                        &gt;
-                    </button>
-                </div>
+    <!-- كرر الكاردات دي بنفس السكل لباقي العناصر -->
+    <!-- ... ضع هنا بقية الكروت بنفس التعديلات (img h-20, p-2, text-sm...) -->
+  </div>
 
-            </main>
+  <!-- pagination -->
+  <div class="flex justify-center items-center mt-6 space-x-2">
+    <button class="px-3 py-2 text-gray-500 border border-gray-300 rounded-lg hover:bg-gray-100 disabled:opacity-50" disabled>&lt;</button>
+    <a href="#" class="px-3 py-2 bg-gray-900 text-white rounded-lg">1</a>
+    <a href="#" class="px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100">2</a>
+    <a href="#" class="px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100">3</a>
+    <button class="px-3 py-2 text-gray-500 border border-gray-300 rounded-lg hover:bg-gray-100">&gt;</button>
+  </div>
+</main>
+
 
         </div>
     </div>
@@ -420,5 +476,41 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('testimonials-slider');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
 
+        if (slider && prevButton && nextButton) {
+            // قيمة التمرير = عرض كارد واحد + المسافة (w-80 + space-x-6)
+            // تقريباً 320 بكسل (w-80) + 24 بكسل (space-x-6) = 344 بكسل. سنستخدم قيمة تقريبية
+            const scrollAmount = 350;
+
+            nextButton.addEventListener('click', () => {
+                slider.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            prevButton.addEventListener('click', () => {
+                slider.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // كود لتفعيل قائمة الهاتف (Mobile Menu)
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (menuToggle && mobileNav) {
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
 </html>
